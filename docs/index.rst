@@ -1,13 +1,15 @@
-Welcome to django-tinymce4-lite documentation!
-==============================================
+Welcome to django-tinymce4-widget documentation!
+================================================
 
-**django-tinymce4-lite** is a reworked fork of `django-tinymce4`_. It provides a `TinyMCE 4`_
+**django-tinymce4-widget** is a reworked fork of `django-tinymce4-lite`_. It provides a `TinyMCE 4`_
 editor widget that can be used in Django forms and models.
 
-In this fork all legacy and broken code has been cleaned in order to provide simple
-but full-featured TinyMCE 4 experience in Django projects.
+This fork had 2 objectives as compared to `django-tinymce4-lite`_:
 
-**django-tinymce4-lite** can use `django-filebrowser`_ or `django-filebrowser-no-grappelli`_
+- **Do not** include any static files, it's using the TinyMCE from the CDN by default.
+- Provide Django 1.7 support.
+
+**django-tinymce4-widget** can use `django-filebrowser`_ or `django-filebrowser-no-grappelli`_
 as a file manager for TinyMCE 4 to insert images and file links into edited text.
 In addition to that, the application includes a spellchecker service for TinyMCE 4 spellchecker plugin.
 
@@ -15,7 +17,7 @@ Compatibility
 -------------
 
 - **Python**: 2.7, 3.4, 3.5
-- **Django**: 1.8, 1.9
+- **Django**: 1.7, 1.8, 1.9, 1.10
 
 License
 -------
@@ -26,11 +28,11 @@ License
 Naming Conventions
 ------------------
 
-In this documentation **django-tinymce4-lite** or **tinymce4-lite** (all lowercase) refers to this
+In this documentation **django-tinymce4-widget** or **tinymce4-widget** (all lowercase) refers to this
 Python/Django application, and **TinyMCE 4** or **TinyMCE** (CamelCase) refers to
 a JavaScript `TinyMCE`_ editor widget. If a version number is omitted, TinyMCE v.4.x.x is assumed.
 
-.. _django-tinymce4: https://github.com/dani0805/django-tinymce4
+.. _django-tinymce4-lite: https://github.com/romanvm/django-tinymce4-lite
 .. _TinyMCE 4: https://www.tinymce.com/
 .. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser
 .. _django-filebrowser-no-grappelli: https://github.com/smacker/django-filebrowser-no-grappelli

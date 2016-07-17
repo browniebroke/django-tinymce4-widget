@@ -1,9 +1,9 @@
 Installation
 ============
 
-Install **django-tinymce4-lite** from PyPI::
+Install **django-tinymce4-widget** from PyPI::
 
-  $ pip install django-tinymce4-lite
+  $ pip install django-tinymce4-widget
 
 Add ``tinymce`` to ``INSTALLED_APPS`` in ``settings.py`` for your Django project:
 

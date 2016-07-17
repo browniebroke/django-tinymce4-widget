@@ -85,7 +85,7 @@ License
 
 MIT license. See LICENSE.txt
 
-.. _django-tinymce4: https://github.com/dani0805/django-tinymce4
+.. _django-tinymce4-lite: https://github.com/romanvm/django-tinymce4-lite
 .. _TinyMCE 4: https://www.tinymce.com/
 .. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser
 .. _django-filebrowser-no-grappelli: https://github.com/smacker/django-filebrowser-no-grappelli
