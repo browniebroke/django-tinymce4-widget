@@ -1,6 +1,0 @@
-Django==1.8.9
-pyenchant
-mock
-django-filebrowser-no-grappelli
-Pillow
-Sphinx
