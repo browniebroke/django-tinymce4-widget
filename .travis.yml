@@ -1,38 +1,31 @@
 language: python
-python:
-  - "2.7"
-  - "3.4"
-  - "3.5"
 env:
-  - DJANGO_VERSION=1.8.13
-  - DJANGO_VERSION=1.9.6
+    - TOX_ENV=py27-dj-1.6
+    - TOX_ENV=py27-dj-1.7
+    - TOX_ENV=py27-dj-1.8
+    - TOX_ENV=py27-dj-1.9
+    - TOX_ENV=py27-dj-master
+    - TOX_ENV=py33-dj-1.6
+    - TOX_ENV=py33-dj-1.7
+    - TOX_ENV=py33-dj-1.8
+    - TOX_ENV=py34-dj-1.6
+    - TOX_ENV=py34-dj-1.7
+    - TOX_ENV=py34-dj-1.8
+    - TOX_ENV=py34-dj-1.9
+    - TOX_ENV=py34-dj-master
+    - TOX_ENV=py35-dj-1.9
+    - TOX_ENV=py35-dj-master
 addons:
   apt:
     packages:
      - enchant
-before_install:
-  - pip install codecov
+matrix:
+    allow_failures:
+        - env: TOX_ENV=py27-dj-master
+        - env: TOX_ENV=py34-dj-master
+        - env: TOX_ENV=py35-dj-master
+
 install:
-  - pip install -q -r test_requirements.txt
-  - pip install -q Django==$DJANGO_VERSION
-script: coverage run manage.py test test_tinymce
-after_success:
- - codecov
-before_deploy: wget https://raw.githubusercontent.com/romanvm/travis_scripts/master/publish_docs.py
-deploy:
-  - provider: script
-    script: python publish_docs.py
-    skip_cleanup: true
-    on:
-      branch: master
-      python: "3.5"
-      condition: "$DJANGO_VERSION = 1.9.6"
-  - provider: pypi
-    skip_cleanup: true
-    user: $PYPI_USER
-    password: $PYPI_PASS
-    distributions: "sdist bdist_wheel"
-    on:
-      tags: true
-      python: "3.5"
-      condition: "$DJANGO_VERSION = 1.9.6"
+    - pip install tox
+
+script: tox -e $TOX_ENV
