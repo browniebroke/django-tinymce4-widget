@@ -2,9 +2,8 @@
 # License: MIT, see LICENSE.txt
 """The django-tinymce4-lite configuration options"""
 
-from __future__ import absolute_import
+from __future__ import absolute_import, unicode_literals
 from django.conf import settings
-from django.contrib.staticfiles.storage import staticfiles_storage
 
 DEFAULT = {
     'selector': 'textarea',
@@ -26,7 +25,7 @@ if USE_SPELLCHECKER:
     DEFAULT['toolbar1'] += ' | spellchecker'
 CONFIG = getattr(settings, 'TINYMCE_DEFAULT_CONFIG', DEFAULT)
 """TinyMCE 4 configuration"""
-JS_URL = getattr(settings, 'TINYMCE_JS_URL', staticfiles_storage.url('tinymce/js/tinymce/tinymce.min.js'))
+JS_URL = getattr(settings, 'TINYMCE_JS_URL', '//cdn.tinymce.com/4/tinymce.min.js')
 """TinyMCE 4 JavaScript code"""
 CSS_URL = getattr(settings, 'TINYMCE_CSS_URL', None)
 """

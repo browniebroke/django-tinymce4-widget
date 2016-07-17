@@ -7,8 +7,7 @@ This TinyMCE widget was copied and extended from this code by John D'Agostino:
 http://code.djangoproject.com/wiki/CustomWidgetsTinyMCE
 """
 
-from __future__ import unicode_literals
-from __future__ import absolute_import
+from __future__ import unicode_literals, absolute_import
 import json
 import logging
 from django.conf import settings
@@ -25,9 +24,7 @@ import tinymce.settings as mce_settings
 
 __all__ = ['TinyMCE', 'render_tinymce_init_js']
 
-logging.basicConfig(format='[%(asctime)s] %(module)s: %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
-logger.setLevel(20)
 
 
 def get_language_config():
@@ -97,8 +94,8 @@ def render_tinymce_init_js(mce_config, callbacks, id_=''):
     if id_:
         mce_config['selector'] = mce_config.get('selector', 'textarea') + '#{0}'.format(id_)
     mce_json = json.dumps(mce_config, indent=2)
-    return render_to_string('tinymce/tinymce_init.js', context={'callbacks': callbacks,
-                                                                'tinymce_config': mce_json[1:-1]})
+    return render_to_string('tinymce/tinymce_init.js', {'callbacks': callbacks,
+                                                        'tinymce_config': mce_json[1:-1]})
 
 
 class TinyMCE(Textarea):
