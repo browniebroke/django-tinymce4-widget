@@ -1,8 +1,8 @@
 django-tinymce4-widget
 ======================
 
-.. image:: https://travis-ci.org/romanvm/django-tinymce4-widget.svg?branch=master
-  :target: https://travis-ci.org/romanvm/django-tinymce4-widget
+.. image:: https://travis-ci.org/browniebroke/django-tinymce4-widget.svg?branch=master
+  :target: https://travis-ci.org/browniebroke/django-tinymce4-widget
 
 **django-tinymce4-widget** is a reworked fork of `django-tinymce4-lite`_. It provides a minimal `TinyMCE 4`_
 editor widget that can be used in Django forms.
