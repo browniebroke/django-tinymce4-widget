@@ -1,4 +1,5 @@
 language: python
+python: '3.5'
 env:
     - TOX_ENV=py27-dj-1.7
     - TOX_ENV=py27-dj-1.8
