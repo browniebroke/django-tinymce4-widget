@@ -1,1 +1,5 @@
-Django>=1.8.0
+pyenchant
+mock
+django-filebrowser-no-grappelli
+Pillow
+Sphinx
