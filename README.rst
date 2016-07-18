@@ -80,7 +80,7 @@ If you are using TinyMCE 4 in your website forms, add ``form.media`` variable in
 Documentation
 =============
 
-http://romanvm.github.io/django-tinymce4-lite
+https://browniebroke.github.io/django-tinymce4-widget/
 
 License
 =======
