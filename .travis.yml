@@ -32,3 +32,4 @@ script: tox -e $TOX_ENV
 
 notifications:
   email: false
+  slack: browniebroke:Nhh14UnAYVVhQu06NlveBdWh
