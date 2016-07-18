@@ -18,10 +18,10 @@ setup(
     version=version,
     packages=['tinymce'],
     include_package_data=True,
-    author='Roman Miroshnychenko (fork author)',
-    author_email='romanvm@yandex.ua',
-    description='A Django application that provides '
-                'a fully functional TinyMCE 4 editor widget for models and forms.',
+    author='Bruno Alla',
+    author_email='alla.brunoo@gmail.com',
+    description='A Django application that provides minimal TinyMCE 4 '
+                'editor widget for models and forms, without any static files.',
     long_description=long_description,
     license='MIT License',
     keywords='django wysiwyg widget tinymce',
@@ -39,12 +39,14 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Framework :: Django',
+        'Framework :: Django :: 1.7',
         'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.9',
+        'Framework :: Django :: 1.10',
         'Topic :: Software Development :: Libraries :: Application Frameworks',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     platforms=['any'],
-    url='https://github.com/romanvm/django-tinymce4-lite',
+    url='https://github.com/browniebroke/django-tinymce4-widget',
     zip_safe=False
 )
