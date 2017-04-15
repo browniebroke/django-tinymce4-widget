@@ -43,7 +43,7 @@ Also you need to add the necessary spelling dictionaries
 if they are missing from ``pyenchant`` default installation on your system.
 
 Read :ref:`"Language Configuration"<language_config>` subsection about configuring
-the **tinymce4-lite** spellchecker.
+the **tinymce4-widget** spellchecker.
 
 .. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser
 .. _django-filebrowser-no-grappelli: https://github.com/smacker/django-filebrowser-no-grappelli

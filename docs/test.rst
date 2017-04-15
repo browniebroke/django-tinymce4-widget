@@ -1,9 +1,9 @@
 Test Project
 ============
 
-The **tinymce4-lite** sources include **test_tinymce** project that can be used to run automated tests
+The **tinymce4-widget** sources include **test_tinymce** project that can be used to run automated tests
 or to try a live TinyMCE 4 editor widget. The test project can also serve as a basic example of
-**tinymce4-lite** usage.
+**tinymce4-widget** usage.
 
 To use the test project, first you need to install the necessary dependencies::
 
@@ -28,7 +28,7 @@ To open TinyMCE 4 editor, run the test server::
 Then open the project's start page in your browser: http://127.0.0.1:8000.
 The browser will open a webpage with a TinyMCE 4 editor.
 
-.. note:: The commands described in this section need to be run from the **tinymce4-lite**
+.. note:: The commands described in this section need to be run from the **tinymce4-widget**
   sources root directory.
 
 The test project is very basic and does nothing else, except for displaying the TinyMCE 4 editor.

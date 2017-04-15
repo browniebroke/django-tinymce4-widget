@@ -37,7 +37,7 @@ for syntax highlighting (default theme). The plugin supports the following langu
 
 The ``codesample`` plugin already includes the necessary Prism components to correctly display code samples
 in TinyMCE, but to make code samples correctly appear on webpages authored with TinyMCE you need to include
-the links to Prism JavaScript/CSS files into the HTML code of your pages. The **tinymce4-lite** application already
+the links to Prism JavaScript/CSS files into the HTML code of your pages. The **tinymce4-widget** application already
 includes :file:`prism.js` and :file:`prism.css` files that can be referenced in your Django templates.
 For example:
 

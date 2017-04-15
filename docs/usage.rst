@@ -5,7 +5,7 @@ HTMLField for Models
 --------------------
 
 For developers who want to implement TinyMCE editor in their Django applications in the simplest possible way,
-**tinymce4-lite** provides a :class:`HTMLField<tinymce.HTMLField>` field for models.
+**tinymce4-widget** provides a :class:`HTMLField<tinymce.HTMLField>` field for models.
 This field can can be used instead of a :class:`TextField<django.db.models.TextField>`.
 For example:
 

@@ -42,7 +42,7 @@ def get_language_config():
     if mce_settings.USE_SPELLCHECKER:
         from enchant import list_languages
         enchant_languages = list_languages()
-        logger.info('Enchant languages: {0}'.format(enchant_languages))
+        logger.debug('Enchant languages: {0}'.format(enchant_languages))
         lang_names = []
         for lang, name in settings.LANGUAGES:
             lang = convert_language_code(lang)
@@ -122,7 +122,7 @@ class TinyMCE(Textarea):
         default_profile = profile or mce_settings.CONFIG.copy()
         self.profile.update(default_profile)
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None):
         if value is None:
             value = ''
         value = smart_text(value)
@@ -144,7 +144,11 @@ class TinyMCE(Textarea):
         js = [mce_settings.JS_URL]
         if mce_settings.USE_FILEBROWSER:
             js.append(reverse('tinymce-filebrowser'))
-        css = {'all': [mce_settings.CSS_URL or reverse('tinymce-css')]}
+        if mce_settings.ADDITIONAL_JS_URLS:
+            js += mce_settings.ADDITIONAL_JS_URLS
+        css = {'all': [reverse('tinymce-css')]}
+        if mce_settings.CSS_URL:
+            css['all'].append(mce_settings.CSS_URL)
         return Media(js=js, css=css)
 
 

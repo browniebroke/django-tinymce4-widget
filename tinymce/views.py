@@ -9,7 +9,7 @@ import json
 import logging
 from django import VERSION
 from django.core.urlresolvers import reverse
-from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.html import strip_tags
@@ -55,7 +55,7 @@ def spell_check(request):
         logger.exception(error)
     if error is not None:
         output['error'] = error
-    return HttpResponse(json.dumps(output), content_type='application/json')
+    return JsonResponse(output)
 
 
 def css(request):
@@ -96,3 +96,4 @@ def filebrowser(request):
         fb_url = request.build_absolute_uri(reverse('filebrowser:fb_browse'))
     return render(request, 'tinymce/filebrowser.js', {'fb_url': fb_url},
                   content_type='application/javascript')
+
