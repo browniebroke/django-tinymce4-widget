@@ -42,8 +42,7 @@ def get_language_config():
     if mce_settings.USE_SPELLCHECKER:
         from enchant import list_languages
         enchant_languages = list_languages()
-        if settings.DEBUG:
-            logger.info('Enchant languages: {0}'.format(enchant_languages))
+        logger.debug('Enchant languages: {0}'.format(enchant_languages))
         lang_names = []
         for lang, name in settings.LANGUAGES:
             lang = convert_language_code(lang)
@@ -146,7 +145,7 @@ class TinyMCE(Textarea):
         if mce_settings.USE_FILEBROWSER:
             js.append(reverse('tinymce-filebrowser'))
         if mce_settings.ADDITIONAL_JS_URLS:
-            js.append(mce_settings.ADDITIONAL_JS_URLS)
+            js += mce_settings.ADDITIONAL_JS_URLS
         css = {'all': [reverse('tinymce-css')]}
         if mce_settings.CSS_URL:
             css['all'].append(mce_settings.CSS_URL)
