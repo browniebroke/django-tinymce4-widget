@@ -27,7 +27,7 @@ CONFIG = getattr(settings, 'TINYMCE_DEFAULT_CONFIG', DEFAULT)
 """TinyMCE 4 configuration"""
 JS_URL = getattr(settings, 'TINYMCE_JS_URL', '//cdn.tinymce.com/4/tinymce.min.js')
 """TinyMCE 4 JavaScript code"""
-ADDIONAL_JS_URLS = getattr(settings, 'TINYMCE_ADDITIONAL_JS_URLS', None)
+ADDITIONAL_JS_URLS = getattr(settings, 'TINYMCE_ADDITIONAL_JS_URLS', None)
 """Additional JS files for TinyMCE (e.g. custom plugins)"""
 CSS_URL = getattr(settings, 'TINYMCE_CSS_URL', None)
 """
