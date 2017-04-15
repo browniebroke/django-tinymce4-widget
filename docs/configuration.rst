@@ -4,16 +4,16 @@ Configuration
 Application Configuration
 -------------------------
 
-The following options can be defined for **tinymce4-lite** in your Django project's
+The following options can be defined for **tinymce4-widget** in your Django project's
 :file:`settings.py` file.
 
 .. _TINYMCE_DEFAULT_CONFIG:
 
 ``TINYMCE_DEFAULT_CONFIG`` -- TinyMCE 4 widget configuration.
-**tinymce4-lite** provides a reasonable default configuration with essential editing capabilities,
+**tinymce4-widget** provides a reasonable default configuration with essential editing capabilities,
 so you need to use this option only if you want to create your own custom TinyMCE configuration.
 
-.. note:: In **tinymce4-lite** the TinyMCE configuration is defined as a Python :class:`dict`.
+.. note:: In **tinymce4-widget** the TinyMCE configuration is defined as a Python :class:`dict`.
   The :class:`dict` configuration is then translated to JSON configuration
   according to :class:`json.JSONEncoder` rules.
 
@@ -40,7 +40,7 @@ a spellcheck button to TinyMCE toolbar. Default: ``False``.
   subsection about how to configure the spellchecker.
 
 ``TINYMCE_FILEBROWSER`` -- enables file browser support in TinyMCE image and link dialogs.
-**tinymce4-lite** supports both `django-filebrowser`_ and  `django-filebrowser-no-grappelli`_ file browsers.
+**tinymce4-widget** supports both `django-filebrowser`_ and  `django-filebrowser-no-grappelli`_ file browsers.
 Default: ``True`` if ``'filebrowser'`` is added to `INSTALLED_APPS`_, else ``False``.
 
 ``TINYMCE_JS_URL`` -- a path to TinyMCE JavaScript library.
@@ -58,14 +58,14 @@ JavaScript objects as Python strings. Default: ``{}`` (an empty :class:`dict`).
 Read `TinyMCE documentation`_ to learn about available callbacks.
 
 .. note:: Custom ``file_browser_callback`` and ``spellchecker_callback`` options defined in ``TINYMCE_CALLBACKS``
-  override **tinymce4-lite** built-in callbacks.
+  override **tinymce4-widget** built-in callbacks.
 
 .. _language_config:
 
 Language Configuration
 ----------------------
 
-By default **tinymce4-lite** uses `LANGUAGE_CODE`_ and `LANGUAGES`_ Django options to automatically set up
+By default **tinymce4-widget** uses `LANGUAGE_CODE`_ and `LANGUAGES`_ Django options to automatically set up
 TinyMCE interface language and available spellchecker dictionaries. That is why it is recommended
 to define both options in your project's :file:`settings.py`.
 
