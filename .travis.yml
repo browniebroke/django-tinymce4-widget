@@ -36,3 +36,12 @@ script: tox -e $TOX_ENV
 notifications:
   email: false
   slack: browniebroke:Nhh14UnAYVVhQu06NlveBdWh
+deploy:
+  provider: pypi
+  user: "Bruno.Alla"
+  password:
+    secure: AEz50U0q/jBLP+ohpBdhQddrBVm2g6AbMlOsXac6NaZSCawgMSNa48dw1r4xiI0BHh2ghD8K5FwLTBxjQDf1lEzKYUJp2oSD9NzUQtDkRhmXn1+wDGZho7ao9YW/ChuRWiSoysDSbcsGjrN8A5pli9o55yjusMp7v1nY50vyvJLOxvYSaY6xneEhAWKgv/8bKKwx4FmWxHV+oQu5GtwlpF23L+ZfG2nF1f/rwmwuWEm20lip2gNyMbwK/qXQPCICk77HZjtfqPfOS13hw0rS5JTLiWMRjkKjHbFjXd4p4y9veh7PrgxOYyf4sdkUkxn2NlgCn0yC2Pu63M9ywtCT3Y50gAHRIvXUFOOyB8JMn34oHPWicv4TKwx98mDjyza8TQYZOxuybW4srOGZOlA4lW42m2wg6Gp57HB7tHC3JNfLB7DR545vCTyUhZXaa6dnf0+Eau6t/nueF3eyvaujovjTi1pNG/aTjo8AHMxC4AKRIa21krCRJEUhCmlWPw84S4mAHQRwgpiIoJrGBm3N7TXHsCuG7umK56le4eZEXeMmDQLii6WkBnWgAcj0+EyGKdystY+uPK0o4aPpAirm6bVfqNZseUFdg94Yfsy6lJHGiwqrcLtTBSBnFscrQzgEOlEOPvDCRXWD5drooHH6HSQ7R97FETIYb9J5diGuzKo=
+  distributions: "sdist bdist_wheel"
+  on:
+    tags: true
+  condition: $TOX_ENV = py35-dj-1.11
