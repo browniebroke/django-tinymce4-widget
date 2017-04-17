@@ -1,9 +1,5 @@
 #!/usr/bin/env python
 from setuptools import setup
-import metadata
-
-app_name = metadata.name
-version = metadata.version
 
 
 def read(filename):
@@ -14,8 +10,8 @@ def read(filename):
 long_description = read('README.rst')
 
 setup(
-    name='django-%s' % app_name,
-    version=version,
+    name='django-tinymce4-widget',
+    version='2.1.0',
     packages=['tinymce'],
     include_package_data=True,
     author='Bruno Alla',

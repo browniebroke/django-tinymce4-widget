@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals, absolute_import
 
 import sys
 import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'test_tinymce.settings')
-
-import metadata
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -24,12 +23,12 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'django-tinymce4-lite'
-copyright = u'2016, Roman Miroshnychenko'
-author = u'Roman Miroshnychenko'
+project = 'django-tinymce4-lite'
+copyright = '2016, Roman Miroshnychenko'
+author = 'Roman Miroshnychenko'
 
-version = metadata.version
-release = metadata.release
+version = '2.1.0'
+release = '2.1.0'
 
 language = None
 exclude_patterns = ['_build']
@@ -70,8 +69,8 @@ latex_elements = {
 }
 
 latex_documents = [
-    (master_doc, 'django-tinymce4-lite.tex', u'django-tinymce4-lite Documentation',
-     u'Roman Miroshnychenko', 'manual'),
+    (master_doc, 'django-tinymce4-lite.tex', 'django-tinymce4-lite Documentation',
+     'Roman Miroshnychenko', 'manual'),
 ]
 
 # -- Options for manual page output ---------------------------------------
@@ -79,14 +78,14 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'django-tinymce4-lite', u'django-tinymce4-lite Documentation',
+    (master_doc, 'django-tinymce4-lite', 'django-tinymce4-lite Documentation',
      [author], 1)
 ]
 
 # -- Options for Texinfo output -------------------------------------------
 
 texinfo_documents = [
-    (master_doc, 'django-tinymce4-lite', u'django-tinymce4-lite Documentation',
+    (master_doc, 'django-tinymce4-lite', 'django-tinymce4-lite Documentation',
      author, 'django-tinymce4-lite', 'One line description of project.',
      'Miscellaneous'),
 ]
