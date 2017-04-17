@@ -11,7 +11,7 @@ long_description = read('README.rst')
 
 setup(
     name='django-tinymce4-widget',
-    version='2.1.0',
+    version='2.1.1',
     packages=['tinymce'],
     include_package_data=True,
     author='Bruno Alla',
