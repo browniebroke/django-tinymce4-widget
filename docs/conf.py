@@ -92,5 +92,7 @@ texinfo_documents = [
 
 intersphinx_mapping = {
     'https://docs.python.org/3.5': None,
-    'https://docs.djangoproject.com/en/1.9/': 'http://docs.djangoproject.com/en/1.9/_objects/',
+    'https://docs.djangoproject.com/en/stable/': 'https://docs.djangoproject.com/en/stable/_objects/'
 }
+
+suppress_warnings = ['image.nonlocal_uri']

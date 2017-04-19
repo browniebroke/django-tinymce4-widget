@@ -1,37 +1,52 @@
 language: python
-python: '3.5'
+
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+
 env:
-    - TOX_ENV=py27-dj-1.7
-    - TOX_ENV=py27-dj-1.8
-    - TOX_ENV=py27-dj-1.9
-    - TOX_ENV=py27-dj-1.10
-    - TOX_ENV=py27-dj-1.11
-    - TOX_ENV=py27-dj-master
-    - TOX_ENV=py34-dj-1.7
-    - TOX_ENV=py34-dj-1.8
-    - TOX_ENV=py34-dj-1.9
-    - TOX_ENV=py34-dj-1.10
-    - TOX_ENV=py34-dj-1.11
-    - TOX_ENV=py34-dj-master
-    - TOX_ENV=py35-dj-1.8
-    - TOX_ENV=py35-dj-1.9
-    - TOX_ENV=py35-dj-1.10
-    - TOX_ENV=py35-dj-1.11
-    - TOX_ENV=py35-dj-master
+  - DJANGO=1.7
+  - DJANGO=1.8
+  - DJANGO=1.9
+  - DJANGO=1.10
+  - DJANGO=1.11
+  - DJANGO=master
+
+matrix:
+  fast_finish: true
+  include:
+    - python: "3.6"
+      env: DJANGO=master
+    - python: "3.6"
+      env: DJANGO=1.11
+    - python: "3.3"
+      env: DJANGO=1.7
+    - python: "3.3"
+      env: DJANGO=1.8
+  exclude:
+    - python: "2.7"
+      env: DJANGO=master
+    - python: "3.4"
+      env: DJANGO=master
+    - python: "3.5"
+      env: DJANGO=1.7
+
+  allow_failures:
+    - env: DJANGO=master
+
 addons:
   apt:
     packages:
      - enchant
-matrix:
-    allow_failures:
-        - env: TOX_ENV=py27-dj-master
-        - env: TOX_ENV=py34-dj-master
-        - env: TOX_ENV=py35-dj-master
 
-install:
-    - pip install tox
+install: pip install -r requirements_test.txt
 
-script: tox -e $TOX_ENV
+# command to run tests using coverage, e.g. python setup.py test
+script: tox
+
+after_success:
+  - codecov -e TOXENV,DJANGO
 
 notifications:
   email: false
@@ -41,7 +56,8 @@ deploy:
   user: "Bruno.Alla"
   password:
     secure: AEz50U0q/jBLP+ohpBdhQddrBVm2g6AbMlOsXac6NaZSCawgMSNa48dw1r4xiI0BHh2ghD8K5FwLTBxjQDf1lEzKYUJp2oSD9NzUQtDkRhmXn1+wDGZho7ao9YW/ChuRWiSoysDSbcsGjrN8A5pli9o55yjusMp7v1nY50vyvJLOxvYSaY6xneEhAWKgv/8bKKwx4FmWxHV+oQu5GtwlpF23L+ZfG2nF1f/rwmwuWEm20lip2gNyMbwK/qXQPCICk77HZjtfqPfOS13hw0rS5JTLiWMRjkKjHbFjXd4p4y9veh7PrgxOYyf4sdkUkxn2NlgCn0yC2Pu63M9ywtCT3Y50gAHRIvXUFOOyB8JMn34oHPWicv4TKwx98mDjyza8TQYZOxuybW4srOGZOlA4lW42m2wg6Gp57HB7tHC3JNfLB7DR545vCTyUhZXaa6dnf0+Eau6t/nueF3eyvaujovjTi1pNG/aTjo8AHMxC4AKRIa21krCRJEUhCmlWPw84S4mAHQRwgpiIoJrGBm3N7TXHsCuG7umK56le4eZEXeMmDQLii6WkBnWgAcj0+EyGKdystY+uPK0o4aPpAirm6bVfqNZseUFdg94Yfsy6lJHGiwqrcLtTBSBnFscrQzgEOlEOPvDCRXWD5drooHH6HSQ7R97FETIYb9J5diGuzKo=
-  distributions: "sdist bdist_wheel"
+  distributions: sdist bdist_wheel
   on:
+    branch: master
     tags: true
-  condition: $TOX_ENV = py35-dj-1.11
+    python: 3.5

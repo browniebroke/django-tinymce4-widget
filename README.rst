@@ -3,6 +3,10 @@ django-tinymce4-widget
 
 .. image:: https://travis-ci.org/browniebroke/django-tinymce4-widget.svg?branch=master
     :target: https://travis-ci.org/browniebroke/django-tinymce4-widget
+.. image:: https://codecov.io/gh/browniebroke/django-tinymce4-widget/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/browniebroke/django-tinymce4-widget
+.. image:: https://readthedocs.org/projects/django-tinymce4-widget/badge/?version=latest
+    :target: http://django-tinymce4-widget.readthedocs.io/en/latest/?badge=latest
 .. image:: https://badge.fury.io/py/django-tinymce4-widget.svg
     :target: https://badge.fury.io/py/django-tinymce4-widget
 
@@ -20,7 +24,7 @@ about how to configure TimyMCE 4 editor widget.
 Compatibility
 -------------
 
-- **Python**: 2.7, 3.4, 3.5
+- **Python**: 2.7, 3.4, 3.5, 3.6
 - **Django**: 1.7-1.11
 
 Quick Start
@@ -80,16 +84,4 @@ If you are using TinyMCE 4 in your website forms, add ``form.media`` variable in
 Documentation
 =============
 
-https://browniebroke.github.io/django-tinymce4-widget/
-
-License
-=======
-
-MIT license. See LICENSE.txt
-
-.. _django-tinymce4-lite: https://github.com/romanvm/django-tinymce4-lite
-.. _TinyMCE 4: https://www.tinymce.com/
-.. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser
-.. _django-filebrowser-no-grappelli: https://github.com/smacker/django-filebrowser-no-grappelli
-.. _TinyMCE docs: https://www.tinymce.com/docs/
-.. _from the CDN: https://www.tinymce.com/download/
+The full documentation is available at http://django-tinymce4-widget.readthedocs.io/en/latest/

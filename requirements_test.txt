@@ -1,0 +1,3 @@
+-r requirements.txt
+codecov
+tox-travis

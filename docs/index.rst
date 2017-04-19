@@ -49,7 +49,6 @@ Contents:
   usage
   advanced
   test
-  modules
 
 Indices and tables
 ==================
