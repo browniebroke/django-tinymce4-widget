@@ -94,3 +94,5 @@ intersphinx_mapping = {
     'https://docs.python.org/3.5': None,
     'https://docs.djangoproject.com/en/1.9/': 'http://docs.djangoproject.com/en/1.9/_objects/',
 }
+
+suppress_warnings = ['image.nonlocal_uri']
