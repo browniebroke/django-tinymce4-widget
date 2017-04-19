@@ -5,6 +5,8 @@ django-tinymce4-widget
     :target: https://travis-ci.org/browniebroke/django-tinymce4-widget
 .. image:: https://codecov.io/gh/browniebroke/django-tinymce4-widget/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/browniebroke/django-tinymce4-widget
+.. image:: https://readthedocs.org/projects/django-tinymce4-widget/badge/?version=latest
+    :target: http://django-tinymce4-widget.readthedocs.io/en/latest/?badge=latest
 .. image:: https://badge.fury.io/py/django-tinymce4-widget.svg
     :target: https://badge.fury.io/py/django-tinymce4-widget
 
@@ -82,4 +84,4 @@ If you are using TinyMCE 4 in your website forms, add ``form.media`` variable in
 Documentation
 =============
 
-https://browniebroke.github.io/django-tinymce4-widget/
+The full documentation is available at http://django-tinymce4-widget.readthedocs.io/en/latest/
