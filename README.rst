@@ -16,7 +16,6 @@ The application can use `django-filebrowser`_ or `django-filebrowser-no-grappell
 as a file manager for TinyMCE 4 to insert images and file links into edited text.
 
 This version **does not** include any static files, it's using the TinyMCE `from the CDN`_ by default. 
-As compared to the original fork, this package provides Django 1.7 support.
 
 **Warning**: TinyMCE 4 is incompatible with TinyMCE 3. Read `TinyMCE docs`_ for more information
 about how to configure TimyMCE 4 editor widget.

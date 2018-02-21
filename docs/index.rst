@@ -4,10 +4,8 @@ Welcome to django-tinymce4-widget documentation!
 **django-tinymce4-widget** is a reworked fork of `django-tinymce4-lite`_. It provides a `TinyMCE 4`_
 editor widget that can be used in Django forms and models.
 
-This fork had 2 objectives as compared to `django-tinymce4-lite`_:
-
-- **Do not** include any static files, it's using the TinyMCE from the CDN by default.
-- Provide Django 1.7 support.
+The main difference  with the original fork is that it **does not** include any static files,
+it's using the TinyMCE from the CDN by default.
 
 **django-tinymce4-widget** can use `django-filebrowser`_ or `django-filebrowser-no-grappelli`_
 as a file manager for TinyMCE 4 to insert images and file links into edited text.
