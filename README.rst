@@ -15,10 +15,16 @@ editor widget that can be used in Django forms.
 The application can use `django-filebrowser`_ or `django-filebrowser-no-grappelli`_
 as a file manager for TinyMCE 4 to insert images and file links into edited text.
 
-This version **does not** include any static files, it's using the TinyMCE `from the CDN`_ by default. 
+This version **does not** include any static files, it's using the TinyMCE from the CDN by default.
 
-**Warning**: TinyMCE 4 is incompatible with TinyMCE 3. Read `TinyMCE docs`_ for more information
+**Warning**: TinyMCE 4 is incompatible with TinyMCE 3. Read `TinyMCE`_ docs for more information
 about how to configure TimyMCE 4 editor widget.
+
+.. _django-tinymce4-lite: https://github.com/romanvm/django-tinymce4-lite
+.. _TinyMCE 4: https://www.tinymce.com/
+.. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser
+.. _django-filebrowser-no-grappelli: https://github.com/smacker/django-filebrowser-no-grappelli
+.. _TinyMCE: https://www.tinymce.com/
 
 Compatibility
 -------------
