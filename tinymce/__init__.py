@@ -16,4 +16,4 @@ from .widgets import TinyMCE, AdminTinyMCE
 
 __all__ = ['HTMLField', 'TinyMCE', 'AdminTinyMCE']
 
-VERSION = '2.1.1'
+VERSION = '3.0.0'
