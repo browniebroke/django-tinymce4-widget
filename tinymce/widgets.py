@@ -8,18 +8,21 @@ http://code.djangoproject.com/wiki/CustomWidgetsTinyMCE
 """
 
 from __future__ import unicode_literals, absolute_import
+
 import json
 import logging
+
 from django.conf import settings
+from django.contrib.admin import widgets as admin_widgets
 from django.forms import Textarea, Media
 from django.forms.utils import flatatt
-from django.utils.encoding import smart_text
-from django.utils.safestring import mark_safe
-from django.utils.html import escape
-from django.utils.translation import get_language, get_language_bidi
 from django.template.loader import render_to_string
-from django.core.urlresolvers import reverse
-from django.contrib.admin import widgets as admin_widgets
+from django.urls import reverse
+from django.utils.encoding import smart_text
+from django.utils.html import escape
+from django.utils.safestring import mark_safe
+from django.utils.translation import get_language, get_language_bidi
+
 import tinymce.settings as mce_settings
 
 __all__ = ['TinyMCE', 'render_tinymce_init_js']

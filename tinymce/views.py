@@ -5,15 +5,16 @@ django-tinymce4-lite views
 """
 
 from __future__ import absolute_import
+
 import json
 import logging
-from django import VERSION
-from django.core.urlresolvers import reverse
+
+from django.conf import settings
 from django.http import JsonResponse
 from django.shortcuts import render
-from django.views.decorators.csrf import csrf_exempt
+from django.urls import reverse
 from django.utils.html import strip_tags
-from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
 
 __all__ = ['spell_check', 'css', 'filebrowser']
 
@@ -71,8 +72,6 @@ def css(request):
     """
     if 'grappelli' in settings.INSTALLED_APPS:
         margin_left = 0
-    elif VERSION[0] == 1 and VERSION[1] <= 8:
-        margin_left = 106  # For old style admin
     else:
         margin_left = 170  # For Django >= 1.9 style admin
     return render(request, 'tinymce/tinymce4.css', {'margin_left': margin_left},
