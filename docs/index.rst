@@ -17,7 +17,7 @@ Compatibility
 -------------
 
 - **Python**: 2.7, 3.4, 3.5
-- **Django**: 1.7-1.11
+- **Django**: 1.10-2.0
 
 License
 -------
