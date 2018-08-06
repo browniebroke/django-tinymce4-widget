@@ -1,11 +1,6 @@
-# coding: utf-8
-# License: MIT, see LICENSE.txt
 """
 django-tinymce4-lite views
 """
-
-from __future__ import absolute_import
-
 import json
 import logging
 
