@@ -1,15 +1,9 @@
-# coding: utf-8
-
 import json
+from unittest import mock
 
 from django.contrib.auth.models import User
-from django.test import TestCase, Client
+from django.test import Client, TestCase
 from django.urls import reverse
-
-try:
-    from unittest import mock
-except ImportError:
-    import mock
 
 
 class RenderTinyMCEWidgetTestCase(TestCase):

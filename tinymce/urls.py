@@ -1,7 +1,6 @@
-# coding: utf-8
-
 from django.conf.urls import url
-from tinymce.views import spell_check, filebrowser, css
+
+from .views import css, filebrowser, spell_check
 
 urlpatterns = [
     url(r'^spellchecker/$', spell_check, name='tinymce-spellchecker'),
