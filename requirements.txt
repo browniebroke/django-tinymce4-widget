@@ -1,4 +1,4 @@
 pyenchant==2.0.0
-django-filebrowser-no-grappelli
+django-filebrowser-no-grappelli==3.7.4
 Pillow
 coverage
