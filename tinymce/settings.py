@@ -2,13 +2,25 @@
 
 from django.conf import settings
 
+TOOLBAR = [
+    "bold italic underline",
+    "alignleft aligncenter alignright alignjustify",
+    "bullist numlist",
+    "outdent indent",
+    "table",
+    "link image",
+    "codesample",
+    "preview code",
+]
+
+PLUGINS = ["link", "image", "preview", "codesample", "contextmenu", "table", "code"]
+
 DEFAULT = {
     "selector": "textarea",
     "theme": "modern",
-    "plugins": "link image preview codesample contextmenu table code",
-    "toolbar1": "bold italic underline | alignleft aligncenter alignright alignjustify "
-    "| bullist numlist | outdent indent | table | link image | codesample | preview code",
-    "contextmenu": "formats | link image",
+    "plugins": " ".join(PLUGINS),
+    "toolbar1": " | ".join(TOOLBAR),
+    "contextmenu": " | ".join(["formats", "link image"]),
     "menubar": False,
     "inline": False,
     "statusbar": True,
@@ -37,11 +49,3 @@ CALLBACKS = getattr(settings, "TINYMCE_CALLBACKS", {})
 USE_FILEBROWSER = getattr(
     settings, "TINYMCE_FILEBROWSER", "filebrowser" in settings.INSTALLED_APPS
 )
-"""
-Enable integration with django-filebrowser
-
-Both `django-filebrowser`_ and `django-filebrowser-no-grappelli`_ are supported.
-
-.. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser
-.. _django-filebrowser-no-grappelli: https://github.com/smacker/django-filebrowser-no-grappelli
-"""
