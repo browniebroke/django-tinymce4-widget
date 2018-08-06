@@ -23,10 +23,10 @@ from filebrowser.sites import site
 from .views import TestCreateView
 
 urlpatterns = [
-    url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^admin/filebrowser/', site.urls),
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', TestCreateView.as_view(), name='create')
+    url(r"^tinymce/", include("tinymce.urls")),
+    url(r"^admin/filebrowser/", site.urls),
+    url(r"^admin/", admin.site.urls),
+    url(r"^$", TestCreateView.as_view(), name="create"),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

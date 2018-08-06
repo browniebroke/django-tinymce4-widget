@@ -20,7 +20,7 @@ from django.utils.translation import get_language, get_language_bidi
 
 from . import settings as mce_settings
 
-__all__ = ['TinyMCE', 'render_tinymce_init_js']
+__all__ = ["TinyMCE", "render_tinymce_init_js"]
 
 logger = logging.getLogger(__name__)
 
@@ -32,27 +32,28 @@ def get_language_config():
     :return: language- and locale-related parameters for TinyMCE 4
     :rtype: dict
     """
-    config = {'language': get_language()[:2]}
+    config = {"language": get_language()[:2]}
     if get_language_bidi():
-        config['directionality'] = 'rtl'
+        config["directionality"] = "rtl"
     else:
-        config['directionality'] = 'ltr'
+        config["directionality"] = "ltr"
     if mce_settings.USE_SPELLCHECKER:
         from enchant import list_languages
+
         enchant_languages = list_languages()
-        logger.debug('Enchant languages: {0}'.format(enchant_languages))
+        logger.debug("Enchant languages: {0}".format(enchant_languages))
         lang_names = []
         for lang, name in settings.LANGUAGES:
             lang = convert_language_code(lang)
             if lang not in enchant_languages:
                 lang = lang[:2]
             if lang not in enchant_languages:
-                logger.error('Missing {0} spellchecker dictionary!'.format(lang))
+                logger.error("Missing {0} spellchecker dictionary!".format(lang))
                 continue
-            if config.get('spellchecker_language') is None:
-                config['spellchecker_language'] = lang
-            lang_names.append('{0}={1}'.format(name, lang))
-        config['spellchecker_languages'] = ','.join(lang_names)
+            if config.get("spellchecker_language") is None:
+                config["spellchecker_language"] = lang
+            lang_names.append("{0}={1}".format(name, lang))
+        config["spellchecker_languages"] = ",".join(lang_names)
     return config
 
 
@@ -65,14 +66,14 @@ def convert_language_code(django_lang):
     :return: ISO language code as ll_CC
     :rtype: str
     """
-    lang_and_country = django_lang.split('-')
+    lang_and_country = django_lang.split("-")
     try:
-        return '_'.join((lang_and_country[0], lang_and_country[1].upper()))
+        return "_".join((lang_and_country[0], lang_and_country[1].upper()))
     except IndexError:
         return lang_and_country[0]
 
 
-def render_tinymce_init_js(mce_config, callbacks, id_=''):
+def render_tinymce_init_js(mce_config, callbacks, id_=""):
     """
     Renders TinyMCE.init() JavaScript code
 
@@ -85,15 +86,19 @@ def render_tinymce_init_js(mce_config, callbacks, id_=''):
     :return: TinyMCE.init() code
     :rtype: str
     """
-    if mce_settings.USE_FILEBROWSER and 'file_browser_callback' not in callbacks:
-        callbacks['file_browser_callback'] = 'djangoFileBrowser'
-    if mce_settings.USE_SPELLCHECKER and 'spellchecker_callback' not in callbacks:
-        callbacks['spellchecker_callback'] = render_to_string('tinymce/spellchecker.js')
+    if mce_settings.USE_FILEBROWSER and "file_browser_callback" not in callbacks:
+        callbacks["file_browser_callback"] = "djangoFileBrowser"
+    if mce_settings.USE_SPELLCHECKER and "spellchecker_callback" not in callbacks:
+        callbacks["spellchecker_callback"] = render_to_string("tinymce/spellchecker.js")
     if id_:
-        mce_config['selector'] = mce_config.get('selector', 'textarea') + '#{0}'.format(id_)
+        mce_config["selector"] = mce_config.get("selector", "textarea") + "#{0}".format(
+            id_
+        )
     mce_json = json.dumps(mce_config, indent=2)
-    return render_to_string('tinymce/tinymce_init.js', {'callbacks': callbacks,
-                                                        'tinymce_config': mce_json[1:-1]})
+    return render_to_string(
+        "tinymce/tinymce_init.js",
+        {"callbacks": callbacks, "tinymce_config": mce_json[1:-1]},
+    )
 
 
 class TinyMCE(Textarea):
@@ -113,6 +118,7 @@ class TinyMCE(Textarea):
 
     .. _TinyMCE 4: https://www.tinymce.com/
     """
+
     def __init__(self, attrs=None, mce_attrs=None, profile=None):
         super(TinyMCE, self).__init__(attrs)
         self.mce_attrs = mce_attrs or {}
@@ -122,18 +128,22 @@ class TinyMCE(Textarea):
 
     def render(self, name, value, attrs=None, renderer=None):
         if value is None:
-            value = ''
+            value = ""
         value = smart_text(value)
         final_attrs = self.build_attrs(attrs)
-        final_attrs['name'] = name
+        final_attrs["name"] = name
         mce_config = self.profile.copy()
         mce_config.update(self.mce_attrs)
-        if mce_config.get('inline', False):
-            html = '<div{0}>{1}</div>\n'.format(flatatt(final_attrs), escape(value))
+        if mce_config.get("inline", False):
+            html = "<div{0}>{1}</div>\n".format(flatatt(final_attrs), escape(value))
         else:
-            html = '<textarea{0}>{1}</textarea>\n'.format(flatatt(final_attrs), escape(value))
+            html = "<textarea{0}>{1}</textarea>\n".format(
+                flatatt(final_attrs), escape(value)
+            )
         html += '<script type="text/javascript">{0}</script>'.format(
-            render_tinymce_init_js(mce_config, mce_settings.CALLBACKS.copy(), final_attrs['id'])
+            render_tinymce_init_js(
+                mce_config, mce_settings.CALLBACKS.copy(), final_attrs["id"]
+            )
         )
         return mark_safe(html)
 
@@ -141,15 +151,16 @@ class TinyMCE(Textarea):
     def media(self):
         js = [mce_settings.JS_URL]
         if mce_settings.USE_FILEBROWSER:
-            js.append(reverse('tinymce-filebrowser'))
+            js.append(reverse("tinymce-filebrowser"))
         if mce_settings.ADDITIONAL_JS_URLS:
             js += mce_settings.ADDITIONAL_JS_URLS
-        css = {'all': [reverse('tinymce-css')]}
+        css = {"all": [reverse("tinymce-css")]}
         if mce_settings.CSS_URL:
-            css['all'].append(mce_settings.CSS_URL)
+            css["all"].append(mce_settings.CSS_URL)
         return Media(js=js, css=css)
 
 
 class AdminTinyMCE(TinyMCE, admin_widgets.AdminTextareaWidget):
     """TinyMCE 4 widget for Django Admin interface"""
+
     pass

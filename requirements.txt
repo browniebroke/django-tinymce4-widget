@@ -4,3 +4,4 @@ Pillow
 Sphinx
 flake8
 coverage
+black
