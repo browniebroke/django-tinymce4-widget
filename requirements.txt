@@ -1,4 +1,4 @@
-pyenchant
+pyenchant==2.0.0
 django-filebrowser-no-grappelli
 Pillow
 coverage
