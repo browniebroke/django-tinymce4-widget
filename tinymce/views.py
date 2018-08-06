@@ -1,6 +1,3 @@
-"""
-django-tinymce4-lite views
-"""
 import json
 import logging
 
