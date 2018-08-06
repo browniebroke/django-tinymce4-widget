@@ -1,3 +1,3 @@
-codecov
-tox
-tox-travis
+codecov==2.0.15
+tox==3.1.3
+tox-travis==0.10
