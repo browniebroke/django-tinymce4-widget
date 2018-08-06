@@ -1,2 +1,2 @@
 flake8==3.5.0
-black
+black==18.6b3
