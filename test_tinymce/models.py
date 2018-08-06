@@ -6,4 +6,5 @@ class TestModel(models.Model):
     """
     A model for testing TinyMCE 4 rendering
     """
-    content = HTMLField(verbose_name='HTML Content')
+
+    content = HTMLField(verbose_name="HTML Content")

@@ -3,7 +3,7 @@ from django.db import models
 
 from .widgets import AdminTinyMCE, TinyMCE
 
-__all__ = ['HTMLField']
+__all__ = ["HTMLField"]
 
 
 class HTMLField(models.TextField):
@@ -20,16 +20,15 @@ class HTMLField(models.TextField):
         class Foo(Model):
             html_content = HTMLField('HTML content')
     """
+
     def __init__(self, *args, **kwargs):
-        self.tinymce_profile = kwargs.pop('profile', None)
+        self.tinymce_profile = kwargs.pop("profile", None)
         super(HTMLField, self).__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
-        defaults = {
-            'widget': TinyMCE(profile=self.tinymce_profile)
-        }
+        defaults = {"widget": TinyMCE(profile=self.tinymce_profile)}
         defaults.update(kwargs)
         # As an ugly hack, we override the admin widget
-        if defaults['widget'] == AdminTextareaWidget:
-            defaults['widget'] = AdminTinyMCE(profile=self.tinymce_profile)
+        if defaults["widget"] == AdminTextareaWidget:
+            defaults["widget"] = AdminTinyMCE(profile=self.tinymce_profile)
         return super(HTMLField, self).formfield(**defaults)

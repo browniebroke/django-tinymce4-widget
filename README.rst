@@ -9,6 +9,8 @@ django-tinymce4-widget
     :target: http://django-tinymce4-widget.readthedocs.io/en/latest/?badge=latest
 .. image:: https://badge.fury.io/py/django-tinymce4-widget.svg
     :target: https://badge.fury.io/py/django-tinymce4-widget
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/ambv/black
 
 **django-tinymce4-widget** is a reworked fork of `django-tinymce4-lite`_. It provides a minimal `TinyMCE 4`_
 editor widget that can be used in Django forms.

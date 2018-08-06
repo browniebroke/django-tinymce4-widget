@@ -20,6 +20,8 @@ matrix:
       env: DJANGO=2.1
     - python: "3.6"
       env: DJANGO=master
+    - python: "3.6"
+      env: TOXENV=lint
 
     - python: "3.7-dev"
       env: DJANGO=2.0

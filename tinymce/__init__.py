@@ -12,6 +12,6 @@ for Django forms and models.
 from .models import HTMLField
 from .widgets import TinyMCE, AdminTinyMCE
 
-__all__ = ['HTMLField', 'TinyMCE', 'AdminTinyMCE']
+__all__ = ["HTMLField", "TinyMCE", "AdminTinyMCE"]
 
-VERSION = '3.0.0'
+VERSION = "3.0.0"
