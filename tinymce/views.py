@@ -4,7 +4,7 @@ import logging
 from django.conf import settings
 from django.http import JsonResponse
 from django.shortcuts import render
-from django.urls import reverse
+from django.urls import reverse, NoReverseMatch
 from django.utils.html import strip_tags
 from django.views.decorators.csrf import csrf_exempt
 
@@ -87,9 +87,10 @@ def filebrowser(request):
     .. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser
     """
     try:
-        fb_url = request.build_absolute_uri(reverse("fb_browse"))
-    except:
-        fb_url = request.build_absolute_uri(reverse("filebrowser:fb_browse"))
+        relative_url = reverse("fb_browse")
+    except NoReverseMatch:
+        relative_url = reverse("filebrowser:fb_browse")
+    fb_url = request.build_absolute_uri(relative_url)
     return render(
         request,
         "tinymce/filebrowser.js",
