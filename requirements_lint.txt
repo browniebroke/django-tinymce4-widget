@@ -1,2 +1,2 @@
-flake8
-black
+flake8==3.5.0
+black==18.6b3
