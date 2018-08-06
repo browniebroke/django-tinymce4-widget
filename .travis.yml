@@ -58,4 +58,5 @@ deploy:
   on:
     branch: master
     tags: true
-    python: 3.5
+    python: 3.6
+    condition: "$DJANGO = 2.0"
