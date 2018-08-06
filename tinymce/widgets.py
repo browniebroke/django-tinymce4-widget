@@ -105,7 +105,8 @@ class TinyMCE(Textarea):
     """
     TinyMCE 4 widget
 
-    It replaces a textarea form widget with a rich-text WYSIWYG `TinyMCE 4`_ editor widget.
+    It replaces a textarea form widget with a rich-text WYSIWYG
+    `TinyMCE 4`_ editor widget.
 
     :param attrs: General Django widget attributes.
     :type attrs: dict
