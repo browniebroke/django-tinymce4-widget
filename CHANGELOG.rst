@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ++++++++++
 
+4.0.0 (2018-08-07)
+++++++++++++++++++
+
 * Add support for Django 2.1
 * Add support for Python 3.7
 * Drop support for Django 1.10
