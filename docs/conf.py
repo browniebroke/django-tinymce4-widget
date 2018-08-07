@@ -24,8 +24,8 @@ project = 'django-tinymce4-lite'
 copyright = '2016, Roman Miroshnychenko'
 author = 'Roman Miroshnychenko'
 
-version = '3.0.0'
-release = '3.0.0'
+version = '4.0.0'
+release = '4.0.0'
 
 language = None
 exclude_patterns = ['_build']
