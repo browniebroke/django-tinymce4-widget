@@ -1,2 +1,2 @@
 bumpversion==0.5.3
-tox==3.2.0
+tox==3.2.1
