@@ -46,14 +46,6 @@ script: tox
 after_success:
   - codecov -e TOXENV,DJANGO
 
-notifications:
-  email: false
-  slack: 
-    rooms:
-      - browniebroke:Nhh14UnAYVVhQu06NlveBdWh
-    on_success: change
-    on_failure: always
-
 deploy:
   provider: pypi
   user: "Bruno.Alla"
