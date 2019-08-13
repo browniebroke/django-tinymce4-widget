@@ -1,8 +1,8 @@
 django-tinymce4-widget
 ======================
 
-.. image:: https://travis-ci.org/browniebroke/django-tinymce4-widget.svg?branch=master
-    :target: https://travis-ci.org/browniebroke/django-tinymce4-widget
+.. image:: https://travis-ci.com/browniebroke/django-tinymce4-widget.svg?branch=master
+    :target: https://travis-ci.com/browniebroke/django-tinymce4-widget
 .. image:: https://codecov.io/gh/browniebroke/django-tinymce4-widget/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/browniebroke/django-tinymce4-widget
 .. image:: https://readthedocs.org/projects/django-tinymce4-widget/badge/?version=latest
