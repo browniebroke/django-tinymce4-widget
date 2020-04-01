@@ -1,4 +1,4 @@
 pyenchant==3.0.1
 django-filebrowser-no-grappelli==3.7.8
-Pillow==7.0.0
+Pillow==7.1.0
 coverage==5.0.4
