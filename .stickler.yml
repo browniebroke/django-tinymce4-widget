@@ -1,8 +1,0 @@
----
-linters:
-    black:
-        fixer: true
-    flake8:
-        python: 3
-        ignore: 'D203'
-        max-line-length: 88
