@@ -4,7 +4,7 @@ import logging
 from django.conf import settings
 from django.http import JsonResponse
 from django.shortcuts import render
-from django.urls import reverse, NoReverseMatch
+from django.urls import NoReverseMatch, reverse
 from django.utils.html import strip_tags
 from django.views.decorators.csrf import csrf_exempt
 
