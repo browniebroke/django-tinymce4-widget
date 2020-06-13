@@ -23,7 +23,7 @@ class HTMLField(models.TextField):
 
     def __init__(self, *args, **kwargs):
         self.tinymce_profile = kwargs.pop("profile", None)
-        super(HTMLField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {"widget": TinyMCE(profile=self.tinymce_profile)}
@@ -31,4 +31,4 @@ class HTMLField(models.TextField):
         # As an ugly hack, we override the admin widget
         if defaults["widget"] == AdminTextareaWidget:
             defaults["widget"] = AdminTinyMCE(profile=self.tinymce_profile)
-        return super(HTMLField, self).formfield(**defaults)
+        return super().formfield(**defaults)

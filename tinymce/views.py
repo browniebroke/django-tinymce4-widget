@@ -4,7 +4,7 @@ import logging
 from django.conf import settings
 from django.http import JsonResponse
 from django.shortcuts import render
-from django.urls import reverse, NoReverseMatch
+from django.urls import NoReverseMatch, reverse
 from django.utils.html import strip_tags
 from django.views.decorators.csrf import csrf_exempt
 
@@ -34,7 +34,7 @@ def spell_check(request):
         from enchant.checker import SpellChecker
 
         if data["params"]["lang"] not in enchant.list_languages():
-            error = "Missing {0} dictionary!".format(data["params"]["lang"])
+            error = "Missing {} dictionary!".format(data["params"]["lang"])
             raise RuntimeError(error)
         checker = SpellChecker(data["params"]["lang"])
         checker.set_text(strip_tags(data["params"]["text"]))

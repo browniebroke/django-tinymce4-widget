@@ -10,7 +10,7 @@ for Django forms and models.
 """
 
 from .models import HTMLField
-from .widgets import TinyMCE, AdminTinyMCE
+from .widgets import AdminTinyMCE, TinyMCE
 
 __all__ = ["HTMLField", "TinyMCE", "AdminTinyMCE"]
 

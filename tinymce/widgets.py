@@ -41,18 +41,18 @@ def get_language_config():
         from enchant import list_languages
 
         enchant_languages = list_languages()
-        logger.debug("Enchant languages: {0}".format(enchant_languages))
+        logger.debug("Enchant languages: {}".format(enchant_languages))
         lang_names = []
         for lang, name in settings.LANGUAGES:
             lang = convert_language_code(lang)
             if lang not in enchant_languages:
                 lang = lang[:2]
             if lang not in enchant_languages:
-                logger.error("Missing {0} spellchecker dictionary!".format(lang))
+                logger.error("Missing {} spellchecker dictionary!".format(lang))
                 continue
             if config.get("spellchecker_language") is None:
                 config["spellchecker_language"] = lang
-            lang_names.append("{0}={1}".format(name, lang))
+            lang_names.append("{}={}".format(name, lang))
         config["spellchecker_languages"] = ",".join(lang_names)
     return config
 
@@ -91,7 +91,7 @@ def render_tinymce_init_js(mce_config, callbacks, id_=""):
     if mce_settings.USE_SPELLCHECKER and "spellchecker_callback" not in callbacks:
         callbacks["spellchecker_callback"] = render_to_string("tinymce/spellchecker.js")
     if id_:
-        mce_config["selector"] = mce_config.get("selector", "textarea") + "#{0}".format(
+        mce_config["selector"] = mce_config.get("selector", "textarea") + "#{}".format(
             id_
         )
     mce_json = json.dumps(mce_config, indent=2)
@@ -121,7 +121,7 @@ class TinyMCE(Textarea):
     """
 
     def __init__(self, attrs=None, mce_attrs=None, profile=None):
-        super(TinyMCE, self).__init__(attrs)
+        super().__init__(attrs)
         self.mce_attrs = mce_attrs or {}
         self.profile = get_language_config()
         default_profile = profile or mce_settings.CONFIG.copy()
@@ -136,12 +136,12 @@ class TinyMCE(Textarea):
         mce_config = self.profile.copy()
         mce_config.update(self.mce_attrs)
         if mce_config.get("inline", False):
-            html = "<div{0}>{1}</div>\n".format(flatatt(final_attrs), escape(value))
+            html = "<div{}>{}</div>\n".format(flatatt(final_attrs), escape(value))
         else:
-            html = "<textarea{0}>{1}</textarea>\n".format(
+            html = "<textarea{}>{}</textarea>\n".format(
                 flatatt(final_attrs), escape(value)
             )
-        html += '<script type="text/javascript">{0}</script>'.format(
+        html += '<script type="text/javascript">{}</script>'.format(
             render_tinymce_init_js(
                 mce_config, mce_settings.CALLBACKS.copy(), final_attrs["id"]
             )
