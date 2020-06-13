@@ -1,5 +1,11 @@
-black==19.10b0
+black==19.10b0; python_version > '3.5'
 bump2version==1.0.0
 codecov==2.1.5
+coverage==5.1
 flake8==3.8.3
+flake8-isort==3.0.0
+pytest==5.4.3
+pytest-cov==2.10.0
+pyupgrade==2.6.1; python_version > '3.5'
 tox==3.15.2
+twine==3.1.1; python_version > '3.5'
