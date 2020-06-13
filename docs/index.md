@@ -9,8 +9,8 @@ spellchecker service for TinyMCE 4 spellchecker plugin.
 
 ## Compatibility
 
--   **Python**: 3.5-3.7
--   **Django**: 1.11-2.1
+-   **Python**: 3.5-3.8
+-   **Django**: 1.11-2.2
 
 ## License
 
