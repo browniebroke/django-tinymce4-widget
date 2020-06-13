@@ -12,7 +12,7 @@ jobs:
       matrix:
         linter:
           - name: Flake8
-            run: flake8
+            run: flake8 --config=setup.cfg
           - name: Black
             run: black --check .
           - name: PyUpgrade
@@ -23,7 +23,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.7
     - name: Install Dependencies
       run: |
         python -m pip install -U pip
