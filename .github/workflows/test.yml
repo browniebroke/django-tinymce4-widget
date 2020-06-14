@@ -55,5 +55,4 @@ jobs:
       run: coverage run manage.py test test_tinymce
     # Upload report: Linux & macOS
     - name: Upload coverage report (Unix)
-      if: matrix.os != 'windows-latest'
-      run: bash <(curl -s https://codecov.io/bash)
+      run: codecov -t ${{ secrets.CODECOV_TOKEN }}
