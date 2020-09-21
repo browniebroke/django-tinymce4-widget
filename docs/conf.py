@@ -4,6 +4,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "test_tinymce.settings")
 
+import tinymce  # noqa E402 isort:skip
+
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
@@ -24,8 +26,8 @@ project = "django-tinymce4-lite"
 copyright = "2016, Roman Miroshnychenko"
 author = "Roman Miroshnychenko"
 
-version = "4.0.0"
-release = "4.0.0"
+version = tinymce.__version__
+release = tinymce.__version__
 
 language = None
 exclude_patterns = ["_build"]
