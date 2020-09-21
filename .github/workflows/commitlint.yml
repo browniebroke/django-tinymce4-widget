@@ -2,7 +2,11 @@
 # https://www.conventionalcommits.org
 
 name: Lint Commit Messages
-on: [push]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   commitlint:
