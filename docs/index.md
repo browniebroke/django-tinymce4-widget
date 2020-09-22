@@ -4,9 +4,6 @@
 
 The main difference with the original fork is that it **does not** include any static files, it's using the TinyMCE from the CDN by default.
 
-**django-tinymce4-widget** can use [django-filebrowser](https://github.com/sehmaschine/django-filebrowser) or [django-filebrowser-no-grappelli](https://github.com/smacker/django-filebrowser-no-grappelli) as a file manager for TinyMCE 4 to insert images and file links into edited text. In addition to that, the application includes a
-spellchecker service for TinyMCE 4 spellchecker plugin.
-
 ## Compatibility
 
 -   **Python**: 3.5-3.8

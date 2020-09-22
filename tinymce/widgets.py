@@ -20,7 +20,6 @@ from django.utils.translation import get_language, get_language_bidi
 
 from . import settings as mce_settings
 
-__all__ = ["TinyMCE", "render_tinymce_init_js"]
 
 logger = logging.getLogger(__name__)
 
@@ -86,8 +85,6 @@ def render_tinymce_init_js(mce_config, callbacks, id_=""):
     :return: TinyMCE.init() code
     :rtype: str
     """
-    if mce_settings.USE_FILEBROWSER and "file_browser_callback" not in callbacks:
-        callbacks["file_browser_callback"] = "djangoFileBrowser"
     if mce_settings.USE_SPELLCHECKER and "spellchecker_callback" not in callbacks:
         callbacks["spellchecker_callback"] = render_to_string("tinymce/spellchecker.js")
     if id_:
@@ -151,8 +148,6 @@ class TinyMCE(Textarea):
     @property
     def media(self):
         js = [mce_settings.JS_URL]
-        if mce_settings.USE_FILEBROWSER:
-            js.append(reverse("tinymce-filebrowser"))
         if mce_settings.ADDITIONAL_JS_URLS:
             js += mce_settings.ADDITIONAL_JS_URLS
         css = {"all": [reverse("tinymce-css")]}
@@ -165,3 +160,6 @@ class AdminTinyMCE(TinyMCE, admin_widgets.AdminTextareaWidget):
     """TinyMCE 4 widget for Django Admin interface"""
 
     pass
+
+
+__all__ = ["TinyMCE", "render_tinymce_init_js"]

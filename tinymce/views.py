@@ -4,11 +4,8 @@ import logging
 from django.conf import settings
 from django.http import JsonResponse
 from django.shortcuts import render
-from django.urls import NoReverseMatch, reverse
 from django.utils.html import strip_tags
 from django.views.decorators.csrf import csrf_exempt
-
-__all__ = ["spell_check", "css", "filebrowser"]
 
 logging.basicConfig(format="[%(asctime)s] %(module)s: %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -75,25 +72,4 @@ def css(request):
     )
 
 
-def filebrowser(request):
-    """
-    JavaScript callback function for `django-filebrowser`_
-
-    :param request: Django http request
-    :type request: django.http.request.HttpRequest
-    :return: Django http response with filebrowser JavaScript code for for TinyMCE 4
-    :rtype: django.http.HttpResponse
-
-    .. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser
-    """
-    try:
-        relative_url = reverse("fb_browse")
-    except NoReverseMatch:
-        relative_url = reverse("filebrowser:fb_browse")
-    fb_url = request.build_absolute_uri(relative_url)
-    return render(
-        request,
-        "tinymce/filebrowser.js",
-        {"fb_url": fb_url},
-        content_type="application/javascript",
-    )
+__all__ = ["spell_check", "css"]
