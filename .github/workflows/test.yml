@@ -29,6 +29,8 @@ jobs:
             django: ">=2.1,<2.2"
           - python: 3.6
             django: ">=2.2,<3.0"
+          - python: 3.6
+            django: ">=3.0,<3.1"
 
           - python: 3.7
             django: ">=1.11,<2.0"
@@ -38,9 +40,14 @@ jobs:
             django: ">=2.1,<2.2"
           - python: 3.7
             django: ">=2.2,<3.0"
+          - python: 3.7
+            django: ">=3.0,<3.1"
 
           - python: 3.8
             django: ">=2.2,<3.0"
+          - python: 3.8
+            django: ">=3.0,<3.1"
+
         os:
           - ubuntu-latest
           # - windows-latest

@@ -7,7 +7,7 @@ The main difference with the original fork is that it **does not** include any s
 ## Compatibility
 
 -   **Python**: 3.5-3.8
--   **Django**: 1.11-2.2
+-   **Django**: 1.11-3.0
 
 ## License
 
