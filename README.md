@@ -1,10 +1,32 @@
 # django-tinymce4-widget
 
-[![image](https://github.com/browniebroke/django-tinymce4-widget/workflows/Test/badge.svg)](https://github.com/browniebroke/django-tinymce4-widget/actions?query=workflow%3ATest)
-[![image](https://codecov.io/gh/browniebroke/django-tinymce4-widget/branch/master/graph/badge.svg)](https://codecov.io/gh/browniebroke/django-tinymce4-widget)
-[![image](https://readthedocs.org/projects/django-tinymce4-widget/badge/?version=latest)](http://django-tinymce4-widget.readthedocs.io/en/latest/?badge=latest)
-[![image](https://badge.fury.io/py/django-tinymce4-widget.svg)](https://badge.fury.io/py/django-tinymce4-widget)
-[![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+<p align="center">
+  <a href="https://github.com/browniebroke/django-tinymce4-widget/actions?query=workflow%3ATest">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/browniebroke/django-tinymce4-widget/Test?label=Test&logo=github&style=flat-square">
+  </a>
+  <a href="https://django-tinymce4-widget.readthedocs.io">
+    <img src="https://img.shields.io/readthedocs/django-tinymce4-widget.svg?logo=read-the-docs&logoColor=fff&style=flat-square" alt="Documentation Status">
+  </a>
+  <a href="https://codecov.io/gh/browniebroke/django-tinymce4-widget">
+    <img src="https://img.shields.io/codecov/c/github/browniebroke/django-tinymce4-widget.svg?logo=codecov&logoColor=fff&style=flat-square" alt="Test coverage percentage">
+  </a>
+  <a href="https://github.com/ambv/black">
+    <img src="https://img.shields.io/badge/code%20style-black-000000.svg?amp;style=flat-square" alt="black">
+  </a>
+  <a href="https://github.com/pre-commit/pre-commit">
+    <img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square" alt="pre-commit">
+  </a>
+</p>
+<p align="center">
+  <a href="https://pypi.org/project/django-tinymce4-widget/">
+    <img src="https://img.shields.io/pypi/v/django-tinymce4-widget.svg?logo=python&logoColor=fff&style=flat-square" alt="PyPi Status">
+  </a>
+  <img src="https://img.shields.io/pypi/pyversions/django-tinymce4-widget.svg?style=flat-square&logo=python&amp;logoColor=fff" alt="pyversions">
+  <img src="https://img.shields.io/pypi/l/django-tinymce4-widget.svg?style=flat-square" alt="license">
+  <a href="https://github.com/browniebroke/django-tinymce4-widget">
+    <img src="https://tokei.rs/b1/github/browniebroke/django-tinymce4-widget/" alt="LoC">
+  </a>
+</p>
 
 **django-tinymce4-widget** is a reworked fork of [django-tinymce4-lite](https://github.com/romanvm/django-tinymce4-lite). It provides a minimal [TinyMCE 4](https://www.tinymce.com/) editor widget that can be used in Django forms.
 
