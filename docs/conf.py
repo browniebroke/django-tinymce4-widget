@@ -7,6 +7,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "test_tinymce.settings")
 import tinymce  # noqa E402 isort:skip
 
 extensions = [
+    "myst_parser",
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
@@ -17,7 +18,7 @@ autodoc_default_flags = ["members", "show-inheritance"]
 
 templates_path = ["_templates"]
 
-source_suffix = ".rst"
+source_suffix = ".md"
 
 master_doc = "index"
 
@@ -36,18 +37,7 @@ pygments_style = "sphinx"
 
 todo_include_todos = False
 
-html_theme = "alabaster"
-
-html_theme_options = {
-    "github_button": True,
-    "github_type": "star&v=2",
-    "github_user": "romanvm",
-    "github_repo": "django-tinymce4-lite",
-    "github_banner": True,
-    "travis_button": True,
-    "codecov_button": True,
-    "description": "TinyMCE 4 editor for Django",
-}
+html_theme = "sphinx_rtd_theme"
 
 html_sidebars = {"**": ["about.html", "navigation.html", "searchbox.html",]}
 
