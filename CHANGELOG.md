@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v4.1.0 (2020-09-22)
+### Feature
+* Add support for Python 3.8 and Django 2.2 ([`311f427`](https://github.com/browniebroke/django-tinymce4-widget/commit/311f427e7e1d26fd9c6621db0a50da5a7ac2eeae))
+
+### Documentation
+* Covert to markdown with MyST parser ([`81fa41e`](https://github.com/browniebroke/django-tinymce4-widget/commit/81fa41ec46fc410696018cd6d47a1ef66a01f04d))
+* Fix docs builds on RTD ([`6c98b98`](https://github.com/browniebroke/django-tinymce4-widget/commit/6c98b98d28de78fe8c77c647d457addf282993a0))
+
 ## 4.0.0 (2018-08-07)
 
 -   Add support for Django 2.1
