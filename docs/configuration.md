@@ -34,8 +34,6 @@ DEFAULT = {
 If you are using a custom TinyMCE configuration, don't forget to add [spellchecker](https://www.tinymce.com/docs/plugins/spellchecker/) plugin to your configuration, and add the necessary menu item/toolbar button. Also read [Language Configuration](#language-configuration) subsection about how to configure the spellchecker.
 ```
 
-`TINYMCE_FILEBROWSER` -- enables file browser support in TinyMCE image and link dialogs. **tinymce4-widget** supports both [django-filebrowser](https://github.com/sehmaschine/django-filebrowser) and [django-filebrowser-no-grappelli](https://github.com/smacker/django-filebrowser-no-grappelli) file browsers. Default: `True` if `'filebrowser'` is added to [INSTALLED_APPS](https://docs.djangoproject.com/en/stable/ref/settings/#installed-apps), else `False`.
-
 `TINYMCE_JS_URL` -- a path to TinyMCE JavaScript library. Default: {file}`{your_static_url}/tinymce/js/tinymce/tinymce.min.js`. The following example shows how to load the TinyMCE library from a CDN:
 
     TINYMCE_JS_URL = '//cdn.tinymce.com/4/tinymce.min.js'

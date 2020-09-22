@@ -1,5 +1,4 @@
 import json
-from unittest import mock
 
 from django.contrib.auth.models import User
 from django.test import Client, TestCase
@@ -65,11 +64,3 @@ class CssViewTestCase(TestCase):
     def test_css_view(self):
         response = self.client.get(reverse("tinymce-css"))
         self.assertContains(response, "margin-left")
-
-
-class FileBrowserViewTestCase(TestCase):
-    @mock.patch("tinymce.views.reverse")
-    def test_filebrowser_view(self, mock_reverse):
-        mock_reverse.return_value = "/filebrowser"
-        response = self.client.get(reverse("tinymce-filebrowser"))
-        self.assertContains(response, "/filebrowser")

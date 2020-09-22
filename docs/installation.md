@@ -23,8 +23,6 @@ urlpatterns = [
 ]
 ```
 
-If you want to use [django-filebrowser](https://github.com/sehmaschine/django-filebrowser) or [django-filebrowser-no-grappelli](https://github.com/smacker/django-filebrowser-no-grappelli) file manager, install one of those packages. Refer to [django-filebrowser documentation](https://django-filebrowser.readthedocs.org/en/latest/) to learn how to install and configure the filebrowser application.
-
 For TinyMCE spellchecker plugin you need to install [pyenchant](http://pythonhosted.org/pyenchant/) package:
 
     $ pip install pyenchant
