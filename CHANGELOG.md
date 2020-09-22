@@ -2,6 +2,17 @@
 
 <!--next-version-placeholder-->
 
+## v5.0.0 (2020-09-22)
+### Feature
+* Add support for Django 3.1 ([`0f1aefd`](https://github.com/browniebroke/django-tinymce4-widget/commit/0f1aefd2bd70a783fc0d6c69572f9d26e0b460ec))
+* Add support for Django 3.0 ([`8671c1b`](https://github.com/browniebroke/django-tinymce4-widget/commit/8671c1b171d28ee70fbc97a933c82156ffc797a9))
+
+### Breaking
+* drop support for django-filebrowser ([`0762230`](https://github.com/browniebroke/django-tinymce4-widget/commit/0762230c1a5f1f8bfb991e368b784bdee29e6cc9))
+
+### Documentation
+* Add contributing guide and changelog ([`d8ba952`](https://github.com/browniebroke/django-tinymce4-widget/commit/d8ba95253afadc3763abdfefeea96ac2c25de7c5))
+
 ## v4.1.0 (2020-09-22)
 ### Feature
 * Add support for Python 3.8 and Django 2.2 ([`311f427`](https://github.com/browniebroke/django-tinymce4-widget/commit/311f427e7e1d26fd9c6621db0a50da5a7ac2eeae))
