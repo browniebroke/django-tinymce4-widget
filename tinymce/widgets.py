@@ -20,7 +20,6 @@ from django.utils.translation import get_language, get_language_bidi
 
 from . import settings as mce_settings
 
-
 logger = logging.getLogger(__name__)
 
 
