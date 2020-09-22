@@ -29,3 +29,11 @@ usage
 advanced
 test
 ```
+
+```{toctree}
+:caption: Project Info
+:maxdepth: 2
+
+contributing
+changelog
+```
