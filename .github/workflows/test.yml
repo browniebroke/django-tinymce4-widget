@@ -62,7 +62,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2.3.3
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v2.1.3
       with:
         python-version: ${{ matrix.versions.python }}
     - name: Install Dependencies
