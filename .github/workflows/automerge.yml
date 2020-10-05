@@ -7,7 +7,6 @@ jobs:
   automerge:
     runs-on: ubuntu-latest
 
-    if: github.actor == 'dependabot'
     steps:
       - name: Wait for status checks
         id: waitforstatuschecks
@@ -24,3 +23,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MERGE_LABELS: dependencies
+          MERGE_FILTER_AUTHOR: dependabot
