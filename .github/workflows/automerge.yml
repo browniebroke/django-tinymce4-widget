@@ -8,14 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Wait for status checks
-        id: waitforstatuschecks
-        uses: WyriHaximus/github-action-wait-for-status@v1.2.0
-        with:
-          ignoreActions: automerge
-          checkInterval: 300
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Merge pull request
         uses: pascalgn/automerge-action@v0.11.0
@@ -24,3 +16,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MERGE_LABELS: dependencies
           MERGE_FILTER_AUTHOR: dependabot
+          MERGE_METHOD: rebase
+          MERGE_RETRIES: 10
+          MERGE_RETRY_SLEEP: 60
+          MERGE_DELETE_BRANCH: true
