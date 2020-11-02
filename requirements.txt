@@ -11,7 +11,7 @@ coverage==5.3             # via -r requirements.in
 distlib==0.3.1            # via virtualenv
 filelock==3.0.12          # via tox, virtualenv
 flake8==3.8.4             # via -r requirements.in
-importlib-metadata==1.7.0  # via flake8, pluggy, tox, virtualenv
+importlib-metadata==2.0.0  # via flake8, pluggy, tox, virtualenv
 isort==5.5.3 ; python_version > "3.5"  # via -r requirements.in
 mccabe==0.6.1             # via flake8
 mypy-extensions==0.4.3    # via black
