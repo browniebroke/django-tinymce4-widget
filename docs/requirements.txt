@@ -5,7 +5,7 @@
 #    pip-compile
 #
 alabaster==0.7.12         # via sphinx
-asgiref==3.2.10           # via django
+asgiref==3.3.1           # via django
 attrs==20.3.0             # via markdown-it-py
 babel==2.8.0              # via sphinx
 certifi==2020.11.8        # via requests
