@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v6.0.0 (2020-11-09)
+### Breaking
+* Drop support for Python 3.5 and Django <2.2  ([`bb729bd`](https://github.com/browniebroke/django-tinymce4-widget/commit/bb729bd338a38ea1702d577ce75866f79c9bc5e2))
+
 ## v5.0.0 (2020-09-22)
 ### Feature
 * Add support for Django 3.1 ([`0f1aefd`](https://github.com/browniebroke/django-tinymce4-widget/commit/0f1aefd2bd70a783fc0d6c69572f9d26e0b460ec))
