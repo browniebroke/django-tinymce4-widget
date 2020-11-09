@@ -17,7 +17,7 @@ mccabe==0.6.1             # via flake8
 mypy-extensions==0.4.3    # via black
 packaging==20.4           # via tox
 pathspec==0.8.1           # via black
-pillow==7.2.0             # via -r requirements.in
+pillow==8.0.1             # via -r requirements.in
 pluggy==0.13.1            # via tox
 py==1.9.0                 # via tox
 pycodestyle==2.6.0        # via flake8
