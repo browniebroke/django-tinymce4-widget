@@ -2,6 +2,15 @@
 
 <!--next-version-placeholder-->
 
+## v6.1.0 (2020-11-18)
+### Feature
+* Migrate packaging to Poetry ([`185df29`](https://github.com/browniebroke/django-tinymce4-widget/commit/185df299da75fd664bc01c610995c1c830d2fd64))
+
+### Documentation
+* Update readme badges ([`308e644`](https://github.com/browniebroke/django-tinymce4-widget/commit/308e644d9f24068e1d211c30b29f5e1205a6a128))
+* Simplify Sphinx makefiles ([`b09d5d7`](https://github.com/browniebroke/django-tinymce4-widget/commit/b09d5d71102a7cdb8dbbda2d26e8278d0dd1a4e1))
+* Update contributing guide ([`96e7014`](https://github.com/browniebroke/django-tinymce4-widget/commit/96e7014dd39631ae97afa6dd7918e8323777fe79))
+
 ## v6.0.0 (2020-11-09)
 ### Breaking
 * Drop support for Python 3.5 and Django <2.2  ([`bb729bd`](https://github.com/browniebroke/django-tinymce4-widget/commit/bb729bd338a38ea1702d577ce75866f79c9bc5e2))
