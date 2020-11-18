@@ -1,0 +1,86 @@
+[tool.poetry]
+name = "django-tinymce4-widget"
+version = "6.0.0"
+description = "A Django application that provides a TinyMCE 4 editor widget without any static files"
+authors = ["Bruno Alla <alla.brunoo@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["django", "wysiwyg", "widget", "tinymce"]
+repository = "https://github.com/browniebroke/django-tinymce4-widget"
+documentation = "https://django-tinymce4-widget.readthedocs.io"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Framework :: Django",
+    "Framework :: Django :: 2.2",
+    "Framework :: Django :: 3.0",
+    "Framework :: Django :: 3.1",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Editors",
+    "Topic :: Text Processing",
+    "Topic :: Text Processing :: Markup",
+    "Topic :: Text Processing :: Markup :: HTML",
+]
+packages = [
+    { include = "tinymce" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+Django = ">=2.2,<3.2"
+pyenchant = {version = "^3.1.1", optional = true}
+
+# Docs deps
+Sphinx = {version = "^3.3.0", optional = true}
+sphinx-rtd-theme = {version = "^0.5.0", optional = true}
+myst-parser = {version = "^0.12.10", optional = true}
+
+[tool.poetry.extras]
+docs = [
+    "myst-parser",
+    "sphinx",
+    "sphinx-rtd-theme",
+]
+spellcheck = ["pyenchant"]
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+flake8 = "^3.8.4"
+isort = "^5.6.4"
+pyupgrade = {version = "^2.7.4", python = "^3.6.1"}
+tox = "^3.20.1"
+coverage = {version = "^5.3", extras = ["toml"]}
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+branch = "main"
+version_variable = [
+    "tinymce/__init__.py:__version__",
+    "pyproject.toml:version",
+]
+build_command = "pip install poetry && poetry build"
+
+[tool.isort]
+profile = "black"
+known_first_party = ["tinymce", "test_tinymce"]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+omit = [
+    "*site-packages*",
+    "*tests*",
+    "*.tox*",
+    "*conftest*",
+]
+show_missing = true
+exclude_lines = ["raise NotImplementedError"]
