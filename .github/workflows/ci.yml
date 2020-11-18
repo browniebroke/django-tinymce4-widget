@@ -20,27 +20,21 @@ jobs:
       fail-fast: false
       matrix:
         linter:
-          - name: Flake8
-            run: flake8 --config=setup.cfg
-          - name: Black
-            run: black --check .
-          - name: PyUpgrade
-            run: pyupgrade --py3-plus `find . -name "*.py"`
-          - name: isort
-            run: isort -c -v .
+          - flake8
+          - black --check .
+          - pyupgrade --py3-plus `find . -name "*.py"`
+          - isort -c -v .
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.7
-    - name: Install Dependencies
-      run: |
-        python -m pip install -U pip
-        pip install -r requirements.txt
-    - name: ${{ matrix.linter.name }}
-      run: ${{ matrix.linter.run }}
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - uses: abatilo/actions-poetry@v2.1.0
+      - name: Install Dependencies
+        run: poetry install
+      - run: poetry run ${{ matrix.linter }}
 
   test:
     strategy:
@@ -74,33 +68,33 @@ jobs:
           # - macOS-latest
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.versions.python }}
-    - name: Install Dependencies
-      run: |
-        python -m pip install -U pip
-        pip install "Django${{ matrix.versions.django }}"
-        pip install -r requirements.txt
-    - name: Run Tests
-      run: coverage run manage.py test test_tinymce
-    - uses: codecov/codecov-action@v1.0.14
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.versions.python }}
+      - uses: abatilo/actions-poetry@v2.1.0
+      - name: Install Dependencies
+        run: |
+          poetry install -E spellcheck
+          poetry run pip install "Django${{ matrix.versions.django }}"
+      - name: Run Tests
+        run: |
+          poetry run coverage run manage.py test test_tinymce
+          poetry run coverage xml
+      - uses: codecov/codecov-action@v1.0.14
 
   docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.7  # Should match version in .readthedocs.yml
-    - name: Install Dependencies
-      run: |
-        python -m pip install -U pip
-        pip install -r docs/requirements.txt
-    - name: Build docs
-      run: |
-        cd docs
-        make html
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 # Should match version in .readthedocs.yml
+      - uses: abatilo/actions-poetry@v2.1.0
+      - name: Install Dependencies
+        run: poetry install -E docs
+      - name: Build docs
+        working-directory: docs
+        run: poetry run make html

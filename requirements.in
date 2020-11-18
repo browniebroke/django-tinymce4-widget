@@ -1,8 +1,0 @@
-pyenchant
-Pillow
-black; python_version > '3.5'
-coverage
-flake8
-isort; python_version > '3.5'
-pyupgrade; python_version > '3.5'
-tox
