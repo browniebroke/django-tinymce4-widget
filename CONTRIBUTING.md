@@ -8,7 +8,7 @@ You can contribute in many ways:
 
 ### Report Bugs
 
-Report bugs at <https://github.com/browniebroke/django-tinymce4-widget/issues>.
+Report bugs on our [issue tracker][gh-issues].
 
 If you are reporting a bug, please include:
 
@@ -18,7 +18,7 @@ If you are reporting a bug, please include:
 
 ### Fix Bugs
 
-Look through the GitHub issues for bugs. Anything tagged with "bug" and "help wanted" is open to whoever wants to implement it.
+Look through [the GitHub issues][gh-issues] for bugs. Anything tagged with "bug" and "help wanted" is open to whoever wants to implement it.
 
 ### Implement Features
 
@@ -26,11 +26,11 @@ Look through the GitHub issues for features. Anything tagged with "enhancement" 
 
 ### Write Documentation
 
-Django Codemod could always use more documentation, whether as part of the official Django Codemod docs, in docstrings, or even on the web in blog posts, articles, and such.
+Django TinyMCE Widget could always use more documentation, whether as part of the official Django TinyMCE Widget docs, in docstrings, or even on the web in blog posts, articles, and such.
 
 ### Submit Feedback
 
-The best way to send feedback is to file an issue at <https://github.com/browniebroke/django-tinymce4-widget/issues>.
+The best way to send feedback is to [file an issue][gh-issues].
 
 If you are proposing a feature:
 
@@ -50,13 +50,13 @@ Ready to contribute? Here's how to set up `django-tinymce4-widget` for local dev
     $ git clone git@github.com:your_name_here/django-tinymce4-widget.git
     ```
 
-3.  Install your local copy into a virtualenv. Assuming you have `virtualenvwrapper` installed, this is how you set up your fork for local development:
+3.  Make sure you have [Poetry] installed, and from the root of the project run:
 
     ```shell
-    $ mkvirtualenv django_tinymce4_widget
-    $ cd django-tinymce4-widget/
-    $ python setup.py develop
+    $ poetry install -E docs -E spellcheck
     ```
+
+    This will install all the needed dependencies for development in an isolated environment.
 
 4.  Create a branch for local development:
 
@@ -66,35 +66,45 @@ Ready to contribute? Here's how to set up `django-tinymce4-widget` for local dev
 
     Now you can make your changes locally.
 
-5.  When you're done making changes, check that your changes pass `flake8` and the tests:
+5.  When you're done making changes, check that your changes pass the tests:
 
     ```shell
-    $ flake8 tinymce4 test_tinymce
-    $ manage.py test test_tinymce
+    $ poetry run manage.py test test_tinymce
     ```
 
-    To get `flake8` and `tox`, pip install them into your virtualenv.
+6.  To make sure your change passes linting, install the [pre-commit] hooks:
 
-6.  Commit your changes and push your branch to GitHub:
+    ```shell
+    $ pre-commit install
+    ```
+
+7.  Commit your changes and push your branch to GitHub:
 
     ```shell
     $ git add .
     $ git commit -m "feat(something): your detailed description of your changes"
     $ git push origin name-of-your-bugfix-or-feature
     ```
-    
-    Note: the commit message should follow [the conventional commits guidelines](https://www.conventionalcommits.org), this is to enable the automation of releases. We run [`commitlint` on CI](https://github.com/marketplace/actions/commit-linter) which will validate the commit messages.
 
-7.  Submit a pull request through the GitHub website.
+    Note: the commit message should follow [the conventional commits guidelines][con-commits], this is to enable the automation of releases. We run [`commitlint` on CI][commit-lint] which will validate the commit messages.
+
+8.  Submit a pull request through the GitHub website.
 
 ## Pull Request Guidelines
 
 Before you submit a pull request, check that it meets these guidelines:
 
 1.  The pull request should include tests.
-2.  If the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring, and add the feature to the list in `README.md`.
+2.  If the pull request adds functionality, the docs should be updated.
 3.  The pull request should work for our supported versions of Python and Django. Check the build on Github and make sure that the tests pass for all combinations.
 
 ## Deploying
 
-The deployment should be automated and can be triggered from the Semantic Release workflow in Github. The next version will be based on [the commit logs](https://python-semantic-release.readthedocs.io/en/latest/commit-log-parsing.html#commit-log-parsing). This is done by [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/index.html) via a Github action.
+The deployment should be automated and can be triggered from the Semantic Release workflow in Github. The next version will be based on the commit messages. This is done by [python-semantic-release][psr] via a Github action.
+
+[gh-issues]: https://github.com/browniebroke/django-tinymce4-widget/issues
+[poetry]: https://python-poetry.org
+[pre-commit]: https://pre-commit.com/
+[con-commits]: https://www.conventionalcommits.org
+[commit-lint]: https://github.com/marketplace/actions/commit-linter
+[psr]: https://python-semantic-release.readthedocs.io
