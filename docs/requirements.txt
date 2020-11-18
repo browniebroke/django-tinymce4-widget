@@ -23,7 +23,7 @@ pygments==2.7.2           # via sphinx
 pyparsing==2.4.7          # via packaging
 pytz==2020.4              # via babel, django
 pyyaml==5.3.1             # via myst-parser
-requests==2.24.0          # via sphinx
+requests==2.25.0          # via sphinx
 six==1.15.0               # via packaging
 snowballstemmer==2.0.0    # via sphinx
 sphinx-rtd-theme==0.5.0   # via -r docs/requirements.in
