@@ -13,7 +13,7 @@ In **tinymce4-widget** the TinyMCE configuration is defined as a Python {class}`
 
 Default configuration:
 
-```python 
+```python
 DEFAULT = {
     'selector': 'textarea',
     'theme': 'modern',

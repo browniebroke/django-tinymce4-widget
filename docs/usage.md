@@ -58,8 +58,8 @@ In custom forms you can use {class}`TinyMCE<tinymce.TinyMCE>` form widget to ren
 The {class}`TinyMCE<tinymce.TinyMCE>` class
 constructor takes 3 parameters:
 
--   `attrs` -- general Django widget attributes.
--   `mce_attrs` -- additional configuration parameters for TinyMCE 4. These parameters **amend** the existing configuration. For example, in the preceding code sample `'width'` parameter sets TinyMCE widget width to 800 pixels without changing other configuration options.
--   `profile` -- TinyMCE 4 configuration parameters. They **replace** the existing configuration. That is, you need to provide a fully defined TinyMCE configuration for `profile` parameter.
+- `attrs` -- general Django widget attributes.
+- `mce_attrs` -- additional configuration parameters for TinyMCE 4. These parameters **amend** the existing configuration. For example, in the preceding code sample `'width'` parameter sets TinyMCE widget width to 800 pixels without changing other configuration options.
+- `profile` -- TinyMCE 4 configuration parameters. They **replace** the existing configuration. That is, you need to provide a fully defined TinyMCE configuration for `profile` parameter.
 
 Also see the information about {ref}`form.media<forms-media>` template variable in the preceding subsection.

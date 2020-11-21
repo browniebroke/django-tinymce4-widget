@@ -1,6 +1,7 @@
 # Advanced Usage
 
 (custom-css)=
+
 ## Applying custom CSS
 
 The [content_style](https://www.tinymce.com/docs/configure/content-appearance/#content_style) and [content_css](https://www.tinymce.com/docs/configure/content-appearance/#content_css) TinyMCE configuration options allow to define custom Cascading Style Sheets for the content in TinyMCE editor window.
