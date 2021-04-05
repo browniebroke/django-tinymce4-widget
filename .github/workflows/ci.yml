@@ -82,7 +82,7 @@ jobs:
         run: |
           poetry run coverage run manage.py test test_tinymce
           poetry run coverage xml
-      - uses: codecov/codecov-action@v1.3.1
+      - uses: codecov/codecov-action@v1.3.2
 
   docs:
     runs-on: ubuntu-latest
