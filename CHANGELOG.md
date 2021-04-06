@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v6.1.1 (2021-04-06)
+### Fix
+* Add django 3.2 compatibility ([`d862d65`](https://github.com/browniebroke/django-tinymce4-widget/commit/d862d65ecf1e71fb100eee464ced0c4fdfdd8d3b))
+* **deps:** Update dependency django to >=2.2,<3.3 ([`3f7aecd`](https://github.com/browniebroke/django-tinymce4-widget/commit/3f7aecdf210f9338b6964e2b2e8ffb9ff2f55e94))
+* **deps:** Update dependency myst-parser to ^0.13.0 ([`0ba93dc`](https://github.com/browniebroke/django-tinymce4-widget/commit/0ba93dcf150dd0f0658a173071ab0637bfb05f6d))
+
 ## v6.1.0 (2020-11-18)
 ### Feature
 * Migrate packaging to Poetry ([`185df29`](https://github.com/browniebroke/django-tinymce4-widget/commit/185df299da75fd664bc01c610995c1c830d2fd64))
