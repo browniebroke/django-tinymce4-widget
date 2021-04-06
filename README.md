@@ -38,7 +38,7 @@ This version **does not** include any static files, it's using the TinyMCE from 
 
 ## Compatibility
 
-- **Python**: 3.6-3.8
+- **Python**: 3.6-3.9
 - **Django**: 2.2-3.2
 
 ## Quick Start
