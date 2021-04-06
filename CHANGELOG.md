@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v6.1.2 (2021-04-06)
+### Fix
+* Add python 3.9 compatibility ([`5f97f78`](https://github.com/browniebroke/django-tinymce4-widget/commit/5f97f789c2cf78581f16caa06596058fdee129a9))
+
 ## v6.1.1 (2021-04-06)
 ### Fix
 * Add django 3.2 compatibility ([`d862d65`](https://github.com/browniebroke/django-tinymce4-widget/commit/d862d65ecf1e71fb100eee464ced0c4fdfdd8d3b))
