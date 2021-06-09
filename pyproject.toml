@@ -56,11 +56,6 @@ pyupgrade = {version = "^2.7.4", python = "^3.6.1"}
 tox = "^3.20.1"
 coverage = {version = "^5.4", extras = ["toml"]}
 
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
 [tool.semantic_release]
 branch = "main"
 version_toml = "pyproject.toml:tool.poetry.version"
@@ -83,3 +78,7 @@ omit = [
 ]
 show_missing = true
 exclude_lines = ["raise NotImplementedError"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
