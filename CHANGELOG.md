@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v6.1.5 (2021-09-13)
+### Fix
+* **deps:** Update dependency sphinx-rtd-theme to v1 ([`eca3824`](https://github.com/browniebroke/django-tinymce4-widget/commit/eca38248e78cd17d11b497f2f4f838275c27adfe))
+
 ## v6.1.4 (2021-06-13)
 ### Fix
 * **deps:** Update dependency myst-parser to ^0.15.0 ([`7da9b61`](https://github.com/browniebroke/django-tinymce4-widget/commit/7da9b61783e7d7d81ba60a8d5b798937eb31c12b))
