@@ -32,7 +32,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">=3.6,<3.10"
-Django = ">=2.2,<3.3"
+Django = ">=2.2,<4.0"
 pyenchant = {version = "^3.1.1", optional = true}
 
 # Docs deps
