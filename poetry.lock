@@ -763,8 +763,8 @@ spellcheck = ["pyenchant"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = ">=3.6,<3.10"
-content-hash = "7bccffe884b879182660ddd2c6c4750f81ec02e4a93523ed5333cad32960eb0b"
+python-versions = "^3.6"
+content-hash = "89f2f602c39e4d0846d5b5ad642c3fe44295c399eb8eb16a403534f03e624767"
 
 [metadata.files]
 alabaster = [
