@@ -15,27 +15,6 @@ jobs:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v4.1.9
 
-  lint:
-    strategy:
-      fail-fast: false
-      matrix:
-        linter:
-          - flake8
-          - black --check .
-          - pyupgrade --py3-plus `find . -name "*.py"`
-          - isort -c -v .
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.9"
-      - uses: snok/install-poetry@v1
-      - name: Install Dependencies
-        run: poetry install
-      - run: poetry run ${{ matrix.linter }}
-
   test:
     strategy:
       fail-fast: false
@@ -106,29 +85,12 @@ jobs:
           poetry run coverage xml
       - uses: codecov/codecov-action@v2.1.0
 
-  docs:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.8" # Should match version in .readthedocs.yml
-      - uses: snok/install-poetry@v1
-      - name: Install Dependencies
-        run: poetry install -E docs
-      - name: Build docs
-        working-directory: docs
-        run: poetry run make html
-
   release:
     runs-on: ubuntu-latest
     environment: release
     if: github.ref == 'refs/heads/main'
     needs:
       - test
-      - docs
-      - lint
       - commitlint
 
     steps:
