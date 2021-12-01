@@ -10,6 +10,9 @@
   <a href="https://codecov.io/gh/browniebroke/django-tinymce4-widget">
     <img src="https://img.shields.io/codecov/c/github/browniebroke/django-tinymce4-widget.svg?logo=codecov&logoColor=fff&style=flat-square" alt="Test coverage">
   </a>
+  <a href="https://results.pre-commit.ci/latest/github/browniebroke/django-tinymce4-widget/main">
+    <img src="https://results.pre-commit.ci/badge/github/browniebroke/django-tinymce4-widget/main.svg" alt="pre-commit.ci status">
+  </a>
 </p>
 <p align="center">
   <a href="https://python-poetry.org/">
