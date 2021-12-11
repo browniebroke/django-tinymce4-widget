@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v6.2.1 (2021-12-11)
+### Fix
+* **deps:** Update dependency myst-parser to ^0.16.0 ([`c3494cd`](https://github.com/browniebroke/django-tinymce4-widget/commit/c3494cddde9062b85abb1c29119dc4b3ada845da))
+
 ## v6.2.0 (2021-10-07)
 ### Feature
 * Add support for Django 4.0 and Python 3.10 ([`e7a7005`](https://github.com/browniebroke/django-tinymce4-widget/commit/e7a7005010e2bbf05b460314893be5354ea70871))
