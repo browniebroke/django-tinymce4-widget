@@ -39,18 +39,18 @@ def get_language_config():
         from enchant import list_languages
 
         enchant_languages = list_languages()
-        logger.debug("Enchant languages: {}".format(enchant_languages))
+        logger.debug(f"Enchant languages: {enchant_languages}")
         lang_names = []
         for lang, name in settings.LANGUAGES:
             lang = convert_language_code(lang)
             if lang not in enchant_languages:
                 lang = lang[:2]
             if lang not in enchant_languages:
-                logger.error("Missing {} spellchecker dictionary!".format(lang))
+                logger.error(f"Missing {lang} spellchecker dictionary!")
                 continue
             if config.get("spellchecker_language") is None:
                 config["spellchecker_language"] = lang
-            lang_names.append("{}={}".format(name, lang))
+            lang_names.append(f"{name}={lang}")
         config["spellchecker_languages"] = ",".join(lang_names)
     return config
 
@@ -132,7 +132,7 @@ class TinyMCE(Textarea):
         mce_config = self.profile.copy()
         mce_config.update(self.mce_attrs)
         if mce_config.get("inline", False):
-            html = "<div{}>{}</div>\n".format(flatatt(final_attrs), escape(value))
+            html = f"<div{flatatt(final_attrs)}>{escape(value)}</div>\n"
         else:
             html = "<textarea{}>{}</textarea>\n".format(
                 flatatt(final_attrs), escape(value)
