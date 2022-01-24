@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v6.3.0 (2022-01-24)
+### Feature
+* Drop support for Python 3.6 ([`2089634`](https://github.com/browniebroke/django-tinymce4-widget/commit/20896343187400c81fcea32db84968c5dcc61a8a))
+
 ## v6.2.1 (2021-12-11)
 ### Fix
 * **deps:** Update dependency myst-parser to ^0.16.0 ([`c3494cd`](https://github.com/browniebroke/django-tinymce4-widget/commit/c3494cddde9062b85abb1c29119dc4b3ada845da))
