@@ -28,7 +28,7 @@ classifiers = [
     "Topic :: Text Processing :: Markup :: HTML",
 ]
 packages = [
-    { include = "tinymce" },
+    { include = "tinymce", from = "src" },
 ]
 
 [tool.poetry.dependencies]
@@ -59,27 +59,34 @@ coverage = {version = "^6.0", extras = ["toml"]}
 pytest = "^6.2"
 pytest-django = "^4.5"
 pytest-cov = "^3.0"
+pytest-pythonpath = "^0.7"
 
 [tool.semantic_release]
 branch = "main"
 version_toml = "pyproject.toml:tool.poetry.version"
-version_variable = "tinymce/__init__.py:__version__"
+version_variable = "src/tinymce/__init__.py:__version__"
 build_command = "pip install poetry && poetry build"
 
 [tool.pytest.ini_options]
-addopts = "-v -Wdefault"
+addopts = "-v -Wdefault --cov=tinymce"
+pythonpaths = [".", "src"]
 DJANGO_SETTINGS_MODULE = "tests.settings"
-
-[tool.isort]
-profile = "black"
-known_first_party = ["tinymce", "tests"]
 
 [tool.coverage.run]
 branch = true
 
 [tool.coverage.report]
-show_missing = true
-exclude_lines = ["raise NotImplementedError"]
+ignore_errors = true
+exclude_lines = [
+    "pragma: no cover",
+    "@overload",
+    "if TYPE_CHECKING",
+    "raise NotImplementedError",
+]
+
+[tool.isort]
+profile = "black"
+known_first_party = ["tinymce", "tests"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
