@@ -51,10 +51,10 @@ spellcheck = ["pyenchant"]
 
 [tool.poetry.dev-dependencies]
 black = "^21.11b1"
-flake8 = "^4.0.0"
+flake8 = "^4.0"
 isort = "^5.10"
 pyupgrade = "^2.29"
-tox = "^3.20.1"
+tox = "^3.20"
 coverage = {version = "^6.0", extras = ["toml"]}
 pytest = "^6.2"
 pytest-django = "^4.5"
