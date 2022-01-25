@@ -56,12 +56,19 @@ isort = "^5.10"
 pyupgrade = "^2.29"
 tox = "^3.20.1"
 coverage = {version = "^6.0", extras = ["toml"]}
+pytest = "^6.2"
+pytest-django = "^4.5"
+pytest-cov = "^3.0"
 
 [tool.semantic_release]
 branch = "main"
 version_toml = "pyproject.toml:tool.poetry.version"
 version_variable = "tinymce/__init__.py:__version__"
 build_command = "pip install poetry && poetry build"
+
+[tool.pytest.ini_options]
+addopts = "-v -Wdefault"
+DJANGO_SETTINGS_MODULE = "tests.settings"
 
 [tool.isort]
 profile = "black"
@@ -71,12 +78,6 @@ known_first_party = ["tinymce", "tests"]
 branch = true
 
 [tool.coverage.report]
-omit = [
-    "*site-packages*",
-    "*tests*",
-    "*.tox*",
-    "*conftest*",
-]
 show_missing = true
 exclude_lines = ["raise NotImplementedError"]
 
