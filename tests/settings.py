@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sites",
-    "test_tinymce",
+    "tests.testapp",
 ]
 
 MIDDLEWARE = [
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "test_tinymce.urls"
+ROOT_URLCONF = "tests.urls"
 
 TEMPLATES = [
     {
@@ -70,8 +70,6 @@ TEMPLATES = [
         },
     }
 ]
-
-WSGI_APPLICATION = "test_tinymce.wsgi.application"
 
 
 # Database

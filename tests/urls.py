@@ -18,7 +18,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-from .views import TestCreateView
+from .testapp.views import TestCreateView
 
 urlpatterns = [
     path("tinymce/", include("tinymce.urls")),
