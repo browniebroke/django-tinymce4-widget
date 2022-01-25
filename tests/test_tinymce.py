@@ -15,7 +15,7 @@ class RenderTinyMCEWidgetTestCase(TestCase):
         User.objects.create_superuser("test", "test@test.com", "test")
         client = Client()
         client.login(username="test", password="test")
-        response = client.get("/admin/test_tinymce/testmodel/add/", follow=True)
+        response = client.get("/admin/testapp/testmodel/add/", follow=True)
         self.assertContains(response, "tinymce.min.js")
         self.assertContains(response, "tinyMCE.init(")
 
