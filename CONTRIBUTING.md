@@ -69,7 +69,7 @@ Ready to contribute? Here's how to set up `django-tinymce4-widget` for local dev
 5.  When you're done making changes, check that your changes pass the tests:
 
     ```shell
-    $ poetry run manage.py test test_tinymce
+    $ poetry run pytest
     ```
 
 6.  To make sure your change passes linting, install the [pre-commit] hooks:
