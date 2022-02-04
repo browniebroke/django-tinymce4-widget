@@ -56,7 +56,7 @@ isort = "^5.10"
 pyupgrade = "^2.29"
 tox = "^3.20"
 coverage = {version = "^6.0", extras = ["toml"]}
-pytest = "^6.2"
+pytest = "^7.0"
 pytest-django = "^4.5"
 pytest-cov = "^3.0"
 pytest-pythonpath = "^0.7"
