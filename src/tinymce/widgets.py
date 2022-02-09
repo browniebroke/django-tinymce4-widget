@@ -142,7 +142,7 @@ class TinyMCE(Textarea):
                 mce_config, mce_settings.CALLBACKS.copy(), final_attrs["id"]
             )
         )
-        return mark_safe(html)
+        return mark_safe(html)  # nosec
 
     @property
     def media(self):
