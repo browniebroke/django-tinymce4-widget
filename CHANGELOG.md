@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v6.3.3 (2022-06-07)
+### Fix
+* **deps:** Update dependency myst-parser to ^0.18.0 ([`5cb20c5`](https://github.com/browniebroke/django-tinymce4-widget/commit/5cb20c54d4c9791ff6ca5ca4b7374cdd84e54462))
+
 ## v6.3.2 (2022-06-06)
 ### Fix
 * **deps:** Revert PSR upgrade ([`56adda1`](https://github.com/browniebroke/django-tinymce4-widget/commit/56adda1ea33780b6c888aeeb082d087d8829a9c3))
