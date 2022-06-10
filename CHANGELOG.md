@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v6.3.4 (2022-06-10)
+### Fix
+* **deps:** Update dependency sphinx to v5 ([`a37c3ce`](https://github.com/browniebroke/django-tinymce4-widget/commit/a37c3ce8f58d2e7c26932421e37ee6df77838b22))
+
 ## v6.3.3 (2022-06-07)
 ### Fix
 * **deps:** Update dependency myst-parser to ^0.18.0 ([`5cb20c5`](https://github.com/browniebroke/django-tinymce4-widget/commit/5cb20c54d4c9791ff6ca5ca4b7374cdd84e54462))
