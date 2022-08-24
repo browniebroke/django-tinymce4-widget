@@ -20,6 +20,7 @@ classifiers = [
     "Framework :: Django :: 3.1",
     "Framework :: Django :: 3.2",
     "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
     "Topic :: Software Development :: Libraries :: Application Frameworks",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Text Editors",
@@ -33,7 +34,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-Django = ">=2.2,<4.1"
+Django = ">=2.2,<4.2"
 pyenchant = { version = "^3.1", optional = true }
 
 # Docs deps
