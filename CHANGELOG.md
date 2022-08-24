@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v6.4.0 (2022-08-24)
+### Feature
+* Add support for Django 4.1 ([#284](https://github.com/browniebroke/django-tinymce4-widget/issues/284)) ([`fa03da9`](https://github.com/browniebroke/django-tinymce4-widget/commit/fa03da9b356a8bd398f9ff1f1b86dcf828e5a5f3))
+
 ## v6.3.4 (2022-06-10)
 ### Fix
 * **deps:** Update dependency sphinx to v5 ([`a37c3ce`](https://github.com/browniebroke/django-tinymce4-widget/commit/a37c3ce8f58d2e7c26932421e37ee6df77838b22))
