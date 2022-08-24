@@ -42,7 +42,7 @@ This version **does not** include any static files, it's using the TinyMCE from 
 ## Compatibility
 
 - **Python**: 3.7-3.10
-- **Django**: 2.2-4.0
+- **Django**: 2.2-4.1
 
 ## Quick Start
 
