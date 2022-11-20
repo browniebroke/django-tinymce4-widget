@@ -50,7 +50,7 @@ docs = [
 ]
 spellcheck = ["pyenchant"]
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 coverage = { version = "^6.0", extras = ["toml"] }
 pytest = "^7.0"
 pytest-django = "^4.5"
