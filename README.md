@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/browniebroke/django-tinymce4-widget/actions?query=workflow%3ACI">
-    <img alt="CI Status" src="https://img.shields.io/github/workflow/status/browniebroke/django-tinymce4-widget/CI?label=CI&logo=github&style=flat-square">
+    <img alt="CI Status" src="https://img.shields.io/github/actions/workflow/status/browniebroke/django-tinymce4-widget/CI?label=CI&logo=github&style=flat-square">
   </a>
   <a href="https://django-tinymce4-widget.readthedocs.io">
     <img src="https://img.shields.io/readthedocs/django-tinymce4-widget.svg?logo=read-the-docs&logoColor=fff&style=flat-square" alt="Documentation Status">
