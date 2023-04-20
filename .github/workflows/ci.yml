@@ -81,7 +81,7 @@ jobs:
           poetry run pip install "Django~=${{ matrix.versions.django }}.0"
       - name: Run Tests
         run: poetry run pytest --cov-report=xml
-      - uses: codecov/codecov-action@v3.1.2
+      - uses: codecov/codecov-action@v3.1.3
 
   release:
     runs-on: ubuntu-latest
