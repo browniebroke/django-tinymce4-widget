@@ -15,9 +15,6 @@ classifiers = [
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Framework :: Django",
-    "Framework :: Django :: 2.2",
-    "Framework :: Django :: 3.0",
-    "Framework :: Django :: 3.1",
     "Framework :: Django :: 3.2",
     "Framework :: Django :: 4.0",
     "Framework :: Django :: 4.1",
@@ -35,7 +32,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-Django = ">=2.2,<5.0"
+Django = ">=3.2,<5.0"
 pyenchant = { version = "^3.1", optional = true }
 
 [tool.poetry.extras]
