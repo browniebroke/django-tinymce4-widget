@@ -6,10 +6,8 @@
 
 ### Feature
 
-* Drop support for Django <3.2 ([`8b5807d`](https://github.com/browniebroke/django-tinymce4-widget/commit/8b5807dd2fbcae0d1be8551613967097ae3d9625))
 * Add support for Python 3.11 ([`4ad1ec3`](https://github.com/browniebroke/django-tinymce4-widget/commit/4ad1ec3ada15052314478ca23bbbbe20a432d596))
 * Add support for Django 4.2 ([`75a0afc`](https://github.com/browniebroke/django-tinymce4-widget/commit/75a0afc9e6c4ecce03b0dafe71935baf0dea8fe2))
-* Drop support for Python 3.7 ([`8f8eca8`](https://github.com/browniebroke/django-tinymce4-widget/commit/8f8eca8cd8ef90b2158b88949a3a18fa3c5151b8))
 
 ### Breaking
 
