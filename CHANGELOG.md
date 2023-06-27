@@ -2,6 +2,25 @@
 
 <!--next-version-placeholder-->
 
+## v7.0.0 (2023-06-27)
+
+### Feature
+
+* Drop support for Django <3.2 ([`8b5807d`](https://github.com/browniebroke/django-tinymce4-widget/commit/8b5807dd2fbcae0d1be8551613967097ae3d9625))
+* Add support for Python 3.11 ([`4ad1ec3`](https://github.com/browniebroke/django-tinymce4-widget/commit/4ad1ec3ada15052314478ca23bbbbe20a432d596))
+* Add support for Django 4.2 ([`75a0afc`](https://github.com/browniebroke/django-tinymce4-widget/commit/75a0afc9e6c4ecce03b0dafe71935baf0dea8fe2))
+* Drop support for Python 3.7 ([`8f8eca8`](https://github.com/browniebroke/django-tinymce4-widget/commit/8f8eca8cd8ef90b2158b88949a3a18fa3c5151b8))
+
+### Breaking
+
+* Drop support for Django <3.2 as it's no longer maintained ([`8b5807d`](https://github.com/browniebroke/django-tinymce4-widget/commit/8b5807dd2fbcae0d1be8551613967097ae3d9625))
+* Drop support for Python 3.7 as it reached EOL on June 27, 2023. More infos: https://devguide.python.org/versions/ ([`8f8eca8`](https://github.com/browniebroke/django-tinymce4-widget/commit/8f8eca8cd8ef90b2158b88949a3a18fa3c5151b8))
+
+### Documentation
+
+* Update badge for CI workflow ([#357](https://github.com/browniebroke/django-tinymce4-widget/issues/357)) ([`cc1d971`](https://github.com/browniebroke/django-tinymce4-widget/commit/cc1d9719922ae9d9ada345f5e2fcc276b7e2609d))
+* Replace docs extra by Poetry group ([#330](https://github.com/browniebroke/django-tinymce4-widget/issues/330)) ([`54ce4e0`](https://github.com/browniebroke/django-tinymce4-widget/commit/54ce4e07ee9b476aa2fa56bdada788b7c2a727a5))
+
 ## v6.4.0 (2022-08-24)
 ### Feature
 * Add support for Django 4.1 ([#284](https://github.com/browniebroke/django-tinymce4-widget/issues/284)) ([`fa03da9`](https://github.com/browniebroke/django-tinymce4-widget/commit/fa03da9b356a8bd398f9ff1f1b86dcf828e5a5f3))
