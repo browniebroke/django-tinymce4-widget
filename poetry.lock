@@ -952,4 +952,4 @@ spellcheck = ["pyenchant"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "3e2559f37589274031c59d0a556b5dd177aeb6acb6587056e3cff37df7eac73d"
+content-hash = "ab79f5eb7ae3bc592202a51945841e426b5ba1a4a19113b091f6f16aecd35c69"
