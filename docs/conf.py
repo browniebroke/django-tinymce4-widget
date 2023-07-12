@@ -39,14 +39,6 @@ todo_include_todos = False
 
 html_theme = "furo"
 
-html_sidebars = {
-    "**": [
-        "about.html",
-        "navigation.html",
-        "searchbox.html",
-    ]
-}
-
 html_static_path = ["_static"]
 
 htmlhelp_basename = "django-tinymce4-litedoc"
