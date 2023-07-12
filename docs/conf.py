@@ -37,15 +37,7 @@ pygments_style = "sphinx"
 
 todo_include_todos = False
 
-html_theme = "sphinx_rtd_theme"
-
-html_sidebars = {
-    "**": [
-        "about.html",
-        "navigation.html",
-        "searchbox.html",
-    ]
-}
+html_theme = "furo"
 
 html_static_path = ["_static"]
 
