@@ -122,6 +122,7 @@ class TinyMCE(Textarea):
         self.profile.update(default_profile)
 
     def render(self, name, value, attrs=None, renderer=None):
+        """Render the widget."""
         if value is None:
             value = ""
         value = smart_str(value)
@@ -138,10 +139,11 @@ class TinyMCE(Textarea):
                 mce_config, mce_settings.CALLBACKS.copy(), final_attrs["id"]
             )
         )
-        return mark_safe(html)  # nosec
+        return mark_safe(html)  # noqa S308
 
     @property
     def media(self):
+        """Media CSS and JS files."""
         js = [mce_settings.JS_URL]
         if mce_settings.ADDITIONAL_JS_URLS:
             js += mce_settings.ADDITIONAL_JS_URLS

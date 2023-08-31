@@ -26,6 +26,7 @@ class HTMLField(models.TextField):
         super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
+        """Build the default form field to use."""
         defaults = {"widget": TinyMCE(profile=self.tinymce_profile)}
         defaults.update(kwargs)
         # As an ugly hack, we override the admin widget
