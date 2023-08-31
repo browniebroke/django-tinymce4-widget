@@ -1,9 +1,0 @@
-[flake8]
-ignore = D203
-exclude =
-	.git,
-	.tox,
-	docs/conf.py,
-	build,
-	dist
-max-line-length = 88

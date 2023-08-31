@@ -1,4 +1,4 @@
-"""The django-tinymce4-lite configuration options"""
+"""The django-tinymce4-lite configuration options."""
 
 from django.conf import settings
 

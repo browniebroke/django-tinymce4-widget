@@ -1,5 +1,5 @@
 """
-TinyMCE 4 forms widget
+TinyMCE 4 forms widget.
 
 This TinyMCE widget was copied and extended from this code by John D'Agostino:
 http://code.djangoproject.com/wiki/CustomWidgetsTinyMCE
@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 def get_language_config():
     """
-    Creates a language configuration for TinyMCE4 based on Django project settings
+    Creates a language configuration for TinyMCE4 based on Django project settings.
 
     :return: language- and locale-related parameters for TinyMCE 4
     :rtype: dict
@@ -57,7 +57,7 @@ def get_language_config():
 
 def convert_language_code(django_lang):
     """
-    Converts Django language codes "ll-cc" into ISO codes "ll_CC" or "ll"
+    Converts Django language codes "ll-cc" into ISO codes "ll_CC" or "ll".
 
     :param django_lang: Django language code as ll-cc
     :type django_lang: str
@@ -73,7 +73,7 @@ def convert_language_code(django_lang):
 
 def render_tinymce_init_js(mce_config, callbacks, id_=""):
     """
-    Renders TinyMCE.init() JavaScript code
+    Renders TinyMCE.init() JavaScript code.
 
     :param mce_config: TinyMCE 4 configuration
     :type mce_config: dict
@@ -87,9 +87,7 @@ def render_tinymce_init_js(mce_config, callbacks, id_=""):
     if mce_settings.USE_SPELLCHECKER and "spellchecker_callback" not in callbacks:
         callbacks["spellchecker_callback"] = render_to_string("tinymce/spellchecker.js")
     if id_:
-        mce_config["selector"] = mce_config.get("selector", "textarea") + "#{}".format(
-            id_
-        )
+        mce_config["selector"] = mce_config.get("selector", "textarea") + f"#{id_}"
     mce_json = json.dumps(mce_config, indent=2)
     return render_to_string(
         "tinymce/tinymce_init.js",
@@ -99,7 +97,7 @@ def render_tinymce_init_js(mce_config, callbacks, id_=""):
 
 class TinyMCE(Textarea):
     """
-    TinyMCE 4 widget
+    TinyMCE 4 widget.
 
     It replaces a textarea form widget with a rich-text WYSIWYG
     `TinyMCE 4`_ editor widget.
@@ -124,6 +122,7 @@ class TinyMCE(Textarea):
         self.profile.update(default_profile)
 
     def render(self, name, value, attrs=None, renderer=None):
+        """Render the widget."""
         if value is None:
             value = ""
         value = smart_str(value)
@@ -134,18 +133,17 @@ class TinyMCE(Textarea):
         if mce_config.get("inline", False):
             html = f"<div{flatatt(final_attrs)}>{escape(value)}</div>\n"
         else:
-            html = "<textarea{}>{}</textarea>\n".format(
-                flatatt(final_attrs), escape(value)
-            )
+            html = f"<textarea{flatatt(final_attrs)}>{escape(value)}</textarea>\n"
         html += '<script type="text/javascript">{}</script>'.format(
             render_tinymce_init_js(
                 mce_config, mce_settings.CALLBACKS.copy(), final_attrs["id"]
             )
         )
-        return mark_safe(html)  # nosec
+        return mark_safe(html)  # noqa S308
 
     @property
     def media(self):
+        """Media CSS and JS files."""
         js = [mce_settings.JS_URL]
         if mce_settings.ADDITIONAL_JS_URLS:
             js += mce_settings.ADDITIONAL_JS_URLS
@@ -156,7 +154,7 @@ class TinyMCE(Textarea):
 
 
 class AdminTinyMCE(TinyMCE, admin_widgets.AdminTextareaWidget):
-    """TinyMCE 4 widget for Django Admin interface"""
+    """TinyMCE 4 widget for Django Admin interface."""
 
     pass
 

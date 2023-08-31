@@ -8,9 +8,7 @@ import tinymce.models
 class Migration(migrations.Migration):
     initial = True
 
-    dependencies = []
-
-    operations = [
+    operations = [  # noqa RUF012
         migrations.CreateModel(
             name="TestModel",
             fields=[

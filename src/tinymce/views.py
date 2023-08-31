@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 @csrf_exempt
 def spell_check(request):
     """
-    Implements the TinyMCE 4 spellchecker protocol
+    Implements the TinyMCE 4 spellchecker protocol.
 
     :param request: Django http request with JSON-RPC payload from TinyMCE 4
         containing a language code and a text to check for errors.
@@ -51,7 +51,7 @@ def spell_check(request):
 
 def css(request):
     """
-    Custom CSS for TinyMCE 4 widget
+    Custom CSS for TinyMCE 4 widget.
 
     By default it fixes widget's position in Django Admin
 

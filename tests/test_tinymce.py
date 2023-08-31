@@ -14,7 +14,7 @@ class RenderTinyMCEWidgetTestCase(TestCase):
     def test_rendering_tinymce4_admin_widget(self):
         User.objects.create_superuser("test", "test@test.com", "test")
         client = Client()
-        client.login(username="test", password="test")
+        client.login(username="test", password="test")  # noqa S106
         response = client.get("/admin/testapp/testmodel/add/", follow=True)
         self.assertContains(response, "tinymce.min.js")
         self.assertContains(response, "tinyMCE.init(")
