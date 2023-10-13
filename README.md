@@ -102,7 +102,3 @@ In Django Admin the widget is used automatically for all models that have `HTMLF
 </body>
 </html>
 ```
-
-## Documentation
-
-The full documentation is available at <http://django-tinymce4-widget.readthedocs.io>
