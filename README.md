@@ -33,6 +33,14 @@
   <img src="https://img.shields.io/pypi/l/django-tinymce4-widget.svg?style=flat-square" alt="license">
 </p>
 
+---
+
+**Documentation**: <a href="https://django-tinymce4-widget.readthedocs.io" target="_blank">https://django-tinymce4-widget.readthedocs.io</a>
+
+**Source Code**: <a href="https://github.com/browniebroke/django-tinymce4-widget" target="_blank">https://github.com/browniebroke/django-tinymce4-widget</a>
+
+---
+
 **django-tinymce4-widget** is a reworked fork of [django-tinymce4-lite](https://github.com/romanvm/django-tinymce4-lite). It provides a minimal [TinyMCE 4](https://www.tinymce.com/) editor widget that can be used in Django forms.
 
 This version **does not** include any static files, it's using the TinyMCE from the CDN by default.
