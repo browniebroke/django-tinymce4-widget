@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v7.0.2 (2023-11-01)
+
+### Fix
+
+- Update dependency django to v4.2.7 ([`9530a60`](https://github.com/browniebroke/django-tinymce4-widget/commit/9530a6051a741da9e949da8058c72dfa933935c4))
+
 ## v7.0.1 (2023-09-04)
 
 ### Fix
