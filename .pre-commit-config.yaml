@@ -32,7 +32,6 @@ repos:
           [
             "--without-hashes",
             "--only=dev",
-            "--all-extras",
             "--format=requirements.txt",
             "--output=requirements-dev.txt",
           ]
