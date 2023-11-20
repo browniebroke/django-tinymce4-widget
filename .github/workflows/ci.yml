@@ -11,7 +11,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Make sure commit messages follow the conventional commits convention:
+  # https://www.conventionalcommits.org
   commitlint:
+    name: Lint Commit Messages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,55 +26,28 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        versions:
-          - python: "3.8"
-            django: "3.2"
-          - python: "3.8"
-            django: "4.0"
-          - python: "3.8"
-            django: "4.1"
-          - python: "3.8"
-            django: "4.2"
-
-          - python: "3.9"
-            django: "3.2"
-          - python: "3.9"
-            django: "4.0"
-          - python: "3.9"
-            django: "4.1"
-          - python: "3.9"
-            django: "4.2"
-
-          - python: "3.10"
-            django: "3.2"
-          - python: "3.10"
-            django: "4.0"
-          - python: "3.10"
-            django: "4.1"
-          - python: "3.10"
-            django: "4.2"
-
-          - python: "3.11"
-            django: "4.1"
-          - python: "3.11"
-            django: "4.2"
-
+        python-version:
+          - "3.8"
+          - "3.9"
+          - "3.10"
+          - "3.11"
+          - "3.12"
     runs-on: ubuntu-latest
-    name: "Python ${{ matrix.versions.python }} - Django ${{ matrix.versions.django }}"
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.versions.python }}
+          python-version: ${{ matrix.python-version }}
       - uses: snok/install-poetry@v1.3.4
-      - name: Install Dependencies
-        run: |
-          poetry install -E spellcheck
-          poetry run pip install "Django~=${{ matrix.versions.django }}.0"
-      - name: Run Tests
-        run: poetry run pytest --cov-report=xml
-      - uses: codecov/codecov-action@v3.1.4
+      - name: Install test dependencies
+        run: pip install tox
+        shell: bash
+      - name: Run tests
+        run: tox -f py$(echo ${{ matrix.python-version }} | tr -d .)
+        shell: bash
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
 
   release:
     needs:
