@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v7.1.0 (2023-11-20)
+
+### Feature
+
+- Add official support for python 3.12 and django 5.0 (#542) ([`06f206a`](https://github.com/browniebroke/django-tinymce4-widget/commit/06f206ad421fdcd3efb174273fc2fe314a1f5a57))
+
 ## v7.0.2 (2023-11-01)
 
 ### Fix
