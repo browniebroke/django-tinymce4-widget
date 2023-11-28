@@ -72,7 +72,7 @@ Add `tinymce.urls` to `urls.py` for your project:
 ```python
 urlpatterns = [
     ...
-    url(r'^tinymce/', include('tinymce.urls')),
+    path('tinymce/', include('tinymce.urls')),
     ...
 ]
 ```
