@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-tinymce4-widget"
-version = "7.1.0"
+version = "7.1.1"
 description = "A Django application that provides a TinyMCE 4 editor widget without any static files"
 authors = ["Bruno Alla <oss@browniebroke.com>"]
 license = "MIT"

@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## v7.1.1 (2023-11-28)
+
+### Documentation
+
+- Add deprecation notice (#546) ([`2f339a4`](https://github.com/browniebroke/django-tinymce4-widget/commit/2f339a4be1e7a7ad6b6d1489fd19003dd9390278))
+- Update url syntax for modern django (#545) ([`7b310b2`](https://github.com/browniebroke/django-tinymce4-widget/commit/7b310b2899a4dd38a1934870adf646b897eb3ba7))
+
+### Fix
+
+- Update url of the cdn for the js resource (#544) ([`653e201`](https://github.com/browniebroke/django-tinymce4-widget/commit/653e201aa4e5cad78b115579a56c613aca45f5ce))
+
 ## v7.1.0 (2023-11-20)
 
 ### Feature
