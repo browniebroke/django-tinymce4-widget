@@ -37,7 +37,11 @@ if USE_SPELLCHECKER:
 CONFIG = getattr(settings, "TINYMCE_DEFAULT_CONFIG", DEFAULT)
 
 # TinyMCE 4 JavaScript code
-JS_URL = getattr(settings, "TINYMCE_JS_URL", "//cdn.tinymce.com/4/tinymce.min.js")
+JS_URL = getattr(
+    settings,
+    "TINYMCE_JS_URL",
+    "https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js",
+)
 
 # Additional JS files for TinyMCE (e.g. custom plugins)
 ADDITIONAL_JS_URLS = getattr(settings, "TINYMCE_ADDITIONAL_JS_URLS", None)

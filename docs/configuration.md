@@ -34,9 +34,10 @@ DEFAULT = {
 If you are using a custom TinyMCE configuration, don't forget to add [spellchecker](https://www.tinymce.com/docs/plugins/spellchecker/) plugin to your configuration, and add the necessary menu item/toolbar button. Also read [Language Configuration](#language-configuration) subsection about how to configure the spellchecker.
 ```
 
-`TINYMCE_JS_URL` -- a path to TinyMCE JavaScript library. Default: {file}`{your_static_url}/tinymce/js/tinymce/tinymce.min.js`. The following example shows how to load the TinyMCE library from a CDN:
+`TINYMCE_JS_URL` -- a path to TinyMCE JavaScript library. Default: `https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js`.
+The following example shows how to load the TinyMCE library from another location:
 
-    TINYMCE_JS_URL = '//cdn.tinymce.com/4/tinymce.min.js'
+    TINYMCE_JS_URL = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'
 
 `TINYMCE_ADDITIONAL_JS_URLS` -- a {class}`list` of URLs for additional JavaScript files to be used with the TinyMCE widget, for example, custom TinyMCE plugins. Default: None.
 
